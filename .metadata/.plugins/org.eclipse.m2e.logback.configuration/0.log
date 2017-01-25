@@ -1,0 +1,22 @@
+2017-01-25 19:11:43,601 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: br.com.listadetarefas:ListaDeTarefas:0.0.1-SNAPSHOT @ /home/thaynan/Documentos/SpringLab3/ListaDeTarefas/pom.xml.
+2017-01-25 19:11:50,953 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ListaDeTarefas/src/main/java
+2017-01-25 19:11:50,969 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ListaDeTarefas/src/main/resources
+2017-01-25 19:11:51,001 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ListaDeTarefas/src/main/resources
+2017-01-25 19:11:51,074 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ListaDeTarefas/src/test/java
+2017-01-25 19:12:00,478 [Worker-5] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 24 sec
+2017-01-25 19:12:00,490 [Worker-5] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2017-01-25 19:12:02,261 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: br.com.listadetarefas:ListaDeTarefas:0.0.1-SNAPSHOT @ /home/thaynan/Documentos/SpringLab3/ListaDeTarefas/pom.xml.
+2017-01-25 19:12:05,717 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ListaDeTarefas/src/main/java
+2017-01-25 19:12:05,718 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ListaDeTarefas/src/main/resources
+2017-01-25 19:12:05,725 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ListaDeTarefas/src/main/resources
+2017-01-25 19:12:05,734 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ListaDeTarefas/src/test/java
+2017-01-25 19:12:09,627 [Worker-5] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for ListaDeTarefas
+2017-01-25 19:12:09,797 [Worker-5] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 9 sec
+2017-01-25 19:12:15,928 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-25 19:12:15,976 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-01-25 19:12:16,046 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-25 19:12:16,062 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-25 19:12:16,062 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/thaynan/Documentos/SpringLab3/ListaDeTarefas/src/test/resources
+2017-01-25 19:12:16,064 [Worker-1] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of ListaDeTarefas
+2017-01-25 19:12:16,069 [Worker-1] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for ListaDeTarefas
+2017-01-25 19:12:16,098 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
