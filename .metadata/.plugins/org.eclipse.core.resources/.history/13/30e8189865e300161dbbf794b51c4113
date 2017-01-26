@@ -1,0 +1,5 @@
+package br.com.listadetarefas.repository;
+
+public interface SubTarefaRepository {
+
+}

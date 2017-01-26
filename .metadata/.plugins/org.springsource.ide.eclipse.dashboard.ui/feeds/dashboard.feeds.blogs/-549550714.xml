@@ -5,7 +5,64 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-01-25T14:47:55Z</updated>
+  <updated>2017-01-26T00:07:01Z</updated>
+  <entry>
+    <title>Spring Tips: Couchbase</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/01/26/spring-tips-couchbase" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2017-01-26:2808</id>
+    <updated>2017-01-26T00:07:01Z</updated>
+    <content type="html">&lt;p&gt;Speaker: &lt;a href="https://www.twitter.com/starbuxman"&gt;Josh Long&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Hi Spring fans! In this tip, we&amp;rsquo;ll look at the Spring Data Couchbase support in Spring Boot 1.4.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/NONg7xrOhPA" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Team at Devoxx US 2017</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/01/25/spring-team-at-devoxx-us-2017" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2017-01-25:2807</id>
+    <updated>2017-01-25T21:53:00Z</updated>
+    <content type="html">&lt;p&gt;Join the Spring Team at the 1st ever &lt;a href="https://devoxx.us"&gt;Devoxx event&lt;/a&gt; in the United States on March 21-23, 2017!&lt;br/&gt;&lt;a href="http://pivotal.io"&gt;Pivotal&lt;/a&gt; is sponsoring and will be at booth # 104 from 10am-8pm on Tuesday March 21st, and 9:45am - 4:30pm on Wednesday March 22rd.&lt;/p&gt;
+&lt;p&gt;We will have experts available to talk to you about Spring Boot, Spring Cloud, Spring Cloud Data Flow, Cloud Foundry, and much more. Stop by and learn about Cloud Native Java from the leaders at Pivotal.&lt;/p&gt;
+&lt;p&gt;Don&amp;rsquo;t miss talks from Spring leaders on Cloud-Native, Reactive Spring, and Big Data!&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://cfp.devoxx.us/2017/talk/XIA-0432/Cloud_Native_Java"&gt;Cloud Native Java with Josh Long&lt;/a&gt;&lt;br/&gt;Room 7 - Tuesday from 11:30 AM til 12:20 PM&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://cfp.devoxx.us/2017/talk/JXY-6860/Reactive_Spring"&gt;Reactive Spring with Josh Long and Mark Heckler&lt;/a&gt;&lt;br/&gt;Room 1 - Tuesday from 3:00 PM til 3:50 PM&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://cfp.devoxx.us/2017/talk/WHT-4635/Navigate_All_the_Knowledge"&gt;Navigate All the Knowledge with James Weaver&lt;/a&gt;&lt;br/&gt;Room 2 - Wednesday from 2:30 PM til 3:20 PM&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Integration 4.3.7 is Available</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/01/25/spring-integration-4-3-7-is-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Gary Russell</name>
+    </author>
+    <id>tag:spring.io,2017-01-25:2806</id>
+    <updated>2017-01-25T21:52:47Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;On behalf of the Spring Integration team, I am pleased to announce that the &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10121&amp;amp;version=15852"&gt;4.3.7.RELEASE&lt;/a&gt; of Spring Integration is now available.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This release contains a few important bug fixes as well as a couple of improvements.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;In particular, this version uses the recently announced &lt;a href="https://spring.io/blog/2017/01/25/spring-framework-4-3-6-available-now"&gt;Spring Framework 4.3.6&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Please be aware that some performance issues were detected when using Spring Integration with Spring Framework versions 4.3.4 and 4.3.5. We recommend that all users upgrade to this version, but this could be particularly important for users of Spring Integration versions 4.3.5 and 4.3.6, which used those versions of Spring Framework respectively. See &lt;a href="https://jira.spring.io/browse/SPR-14929"&gt;this issue&lt;/a&gt; for details to see if you are affected&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This version will be the default version with the upcoming Spring Boot 1.4.4 and 1.5.0 releases.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-integration/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://jira.spring.io/browse/INT"&gt;JIRA&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration/blob/master/CONTRIBUTING.md"&gt;Contributions&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-integration"&gt;Help&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-integration"&gt;Chat&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</content>
+  </entry>
   <entry>
     <title>Spring Framework 4.3.6 available now</title>
     <link rel="alternate" href="https://spring.io/blog/2017/01/25/spring-framework-4-3-6-available-now" />
@@ -33,8 +90,8 @@
 &lt;p&gt;Thank you for all of the feedback and suggestions that you have contributed to the plugin thus far. Please let us know on &lt;a href="https://github.com/spring-gradle-plugins/dependency-management-plugin/issues"&gt;GitHub&lt;/a&gt; or &lt;a href="https://gitter.im/spring-gradle-plugins/dependency-management-plugin"&gt;Gitter&lt;/a&gt; about any problems you find or improvements that you&amp;rsquo;d like to see.&lt;/p&gt;</content>
   </entry>
   <entry>
-    <title>This Week in Spring Cloud - January 24th, 2017</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/01/24/this-week-in-spring-cloud-january-24th-2017" />
+    <title>This Week in Spring   - January 24th, 2017</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/01/24/this-week-in-spring-january-24th-2017" />
     <category term="engineering" label="Engineering" />
     <author>
       <name>Josh Long</name>
@@ -541,70 +598,5 @@ public MessageHandler smbMessageHandler(SmbSessionFactory smbSessionFactory) {
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - January 17th, 2017</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/01/17/this-week-in-spring-january-17th-2017" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2017-01-17:2789</id>
-    <updated>2017-01-17T09:54:00Z</updated>
-    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! We&amp;rsquo;ve got a lot to get into this week - even &lt;em&gt;more&lt;/em&gt; so than usual! So, let&amp;rsquo;s get into it!&lt;/p&gt;
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-partner="tweetdeck"&gt;&lt;p lang="en" dir="ltr"&gt;Starting to put together topics for the next season of Spring Tips: what would you like to see discussed?&lt;/p&gt;&amp;mdash; Josh Long (龙之春, जोश) (@starbuxman) &lt;a href="https://twitter.com/starbuxman/status/819903565342851076"&gt;January 13, 2017&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;This week there are a &lt;em&gt;lot&lt;/em&gt; of great SpringOne Platform 2016 replays available online thanks to our very own &lt;a href="http://twitter.com/PieterHumphrey"&gt;Pieter Humphrey&lt;/a&gt;!&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Don&amp;rsquo;t miss Stéphane Maldini&amp;rsquo;s SpringOne Platform (S1P) 2016 talk introducing &lt;a href="https://spring.io/blog/2017/01/16/springone-platform-2016-replay-reactor-3-0-a-jvm-foundation-for-java-8-and-reactive-streams"&gt;Reactor 3.0&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;or this S1P 2016 talk by Sebastien Deleuze and Stephane Maldini &lt;a href="https://spring.io/blog/2017/01/16/springone-platform-2016-replay-a-lite-rx-api-for-the-jvm"&gt;on reactive programming options for the JVM&lt;/a&gt; (introducing Reactor and RxJava, among others)&lt;/li&gt;
-  &lt;li&gt;Yahoo! &lt;a href="https://twitter.com/mgrzejszczak/status/819955779000213505"&gt;Marcin just tweeted&lt;/a&gt; some exciting news: &lt;a href="https://cloud.spring.io/spring-cloud-contract/spring-cloud-contract.html#_pact_converter"&gt;Pact support has been added to Spring Cloud Contract&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Noriaki Tatsumi ( from Capital One) gave a nice S1P 2016 talk on &lt;a href="https://spring.io/blog/2017/01/16/springone-platform-2016-replay-operating-a-high-velocity-large-organization-with-spring-cloud-microservices"&gt;operating a high velocity organization with Spring Cloud&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Google&amp;rsquo;s Ray Tsang and Bret McGowen put together a nice &lt;a href="https://spring.io/blog/2017/01/16/springone-platform-2016-replay-grpc-101-for-spring-developers"&gt;talk on using gRPC for Spring Developers&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;in this S1P 2016 talk, Ben Hale, Paul Harris and Stephane Maldini introduce some &lt;a href="https://spring.io/blog/2017/01/16/springone-platform-2016-replay-designing-implementing-and-using-reactive-apis"&gt;of the nuance of building reactive APIs&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Ryan Baxter has just announced &lt;a href="https://spring.io/blog/2017/01/12/spring-cloud-camden-sr4-is-available"&gt;Spring Cloud Camden.SR4&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Glenn Renfro just &lt;a href="https://spring.io/blog/2017/01/10/spring-cloud-task-1-1-2-release-is-now-available"&gt;announced Spring Cloud Task 1.1.2.RELEASE&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;speaking of Spring Cloud Contract, I really dig this post by epages&amp;rsquo; Mathias on building &lt;a href="https://developer.epages.com/blog/2017/01/17/how-to-test-eventbased-services-using-contracts.html"&gt;and testing event-driven microservices with Spring Cloud Contract&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I &lt;em&gt;loved&lt;/em&gt; our very own Toshiaki Maki&amp;rsquo;s exhaustive repository demonstrating how to &lt;a href="https://github.com/making/spring-boot-db-samples"&gt;use Spring Boot with a larger number of different SQL persistence technologies&lt;/a&gt;. &lt;em&gt;Great&lt;/em&gt; resource! Bookmark this!&lt;/li&gt;
-  &lt;li&gt;and speaking of persistence options, I really enjoyed community hero &lt;a href="https://www.youtube.com/shared?ci=N3HpOiGbM60"&gt;Michael Simmons&amp;rsquo; talk on JOOQ and Spring Boot&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Hortonworks&amp;rsquo;s Tim Spann got a few great posts on &lt;a href="https://community.hortonworks.com/topics/microservice.html"&gt;using Spring Boot with Apache Phoenix or Apache Hive&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Martin Westergaard Lassen has put together a nice post on his top favorite seven (ahem! six.. :D) &lt;a href="http://container-solutions.com/my-top-7-favourite-features-of-spring-boot/"&gt;features of Spring Boot&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I really liked this post by Apigee&amp;rsquo;s Alan Ho on the reasons &lt;a href="http://sdtimes.com/guest-view-microservices-death-diffusing-monolith-time-bomb/"&gt;that organizations diffuse monolithic time-bombs&lt;/a&gt;: &amp;ldquo;If the monolithic stack doesn’t go, the good developers will&amp;rdquo;&lt;/li&gt;
-  &lt;li&gt;Yahoo! just open-sourced their &lt;a href="http://sdtimes.com/yahoo-open-sources-continuous-delivery-tool-screwdriver/"&gt;continuous delivery platform called Screwdriver&lt;/a&gt;. This has little or nothing to do with Spring or Pivotal, directly, yet, but it&amp;rsquo;s yet another contender in the ever expanding ecosystem of continuous delivery tools, along with Pivotal&amp;rsquo;s Concourse, Netlfix Spinnaker (to which Pivotal, Google, Microsoft and Netflix all commit and contribute), Jenkins and so many more. Remember, at the end of the day, the most important metric for organizational agility isn&amp;rsquo;t cloud computing or microservices, it&amp;rsquo;s the ability to continuously (quickly and safely) deliver value to the customer.&lt;/li&gt;
-  &lt;li&gt;This is super cool! Now you &lt;a href="https://blog.switchbit.io/camel-spring-cloud-stream/"&gt;can use Apache Camel with Spring Cloud Stream&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;this is a topic near and dear to my heart: using &lt;a href="https://github.com/aglassman/coffee-bot"&gt;a Spring Boot Slack bot to notify people of the availability of coffee&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Hurray! &lt;a href="https://github.com/spring-cloud/spring-cloud-commons/issues/162"&gt;Cloud Foundry surgical routing is now supported in Spring Cloud Ribbon-based load-balancing&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;want to consume of the Spring Cloud Services from .NET applications? &lt;a href="https://www.altoros.com/blog/enabling-dotnet-core-microservices-with-steeltoe-and-pivotal-cloud-foundry/"&gt;Check out this post on Steeltoe&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Evan Brown put &lt;a href="https://cloudplatform.googleblog.com/2017/01/partnering-on-open-source-Google-and-Pivotal-engineers-talk-Cloud-Foundry-on-GCP.html"&gt;together a succinct blog&lt;/a&gt; introducing a replay of a talk on how to deploy Pivotal Cloud Foundry on Google Cloud Platform. &lt;a href="https://www.youtube.com/watch?v=TBsc7kiog5Q"&gt;Check out this talk on BOSH and Cloud Foundry Basics for Google Cloud Platform, pt. 1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;want to learn how to use Spring Cloud Security (and its OAuth support for clients) with &lt;a href="https://developers.redhat.com/blog/2017/01/05/spring-boot-and-oauth2-with-keycloak/"&gt;RedHat&amp;rsquo;s Keycloak? Check this blog out by RedHat&amp;rsquo;s Kamesh out&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>SpringOne Platform 2016 Replay: Reactor 3.0, a JVM foundation for Java 8 and Reactive Streams</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/01/16/springone-platform-2016-replay-reactor-3-0-a-jvm-foundation-for-java-8-and-reactive-streams" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2017-01-17:2788</id>
-    <updated>2017-01-16T19:51:00Z</updated>
-    <content type="html">&lt;p&gt;Recorded at SpringOne Platform 2016.&lt;br/&gt;Speaker: Stéphane Maldini&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/reactor-30-a-jvm-foundation-for-java-8-and-reactive-streams"&gt;http://www.slideshare.net/SpringCentral/reactor-30-a-jvm-foundation-for-java-8-and-reactive-streams&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The apparent simplicity of the publisher/subscriber model as exposed in Reactive-Streams can be deceiving. The relatively fast release cycle for libraries in that space is not a myth, concurrency is hard. To keep out undesired side-effects, most Reactive projects have adopted a vertical approach potentially excluding developers from decision-making around execution model or sometimes language.&lt;/p&gt;
-&lt;p&gt;What if we were able to leave the developer in control, positioning as a robust foundation and making the most of the now industrial standard Java 8 ?&lt;/p&gt;
-&lt;p&gt;What if we hardened this foundation through open-source and research collaboration, with a direct feedback loop from Pivotal engineering ?&lt;/p&gt;
-&lt;p&gt;In essence, that&amp;rsquo;s what we aim to achieve with Reactor 2.5. This session is an invitation to explore how the new Reactor design, structure and features can progressively help you go Reactive and show how it plays out in your applications today and tomorrow.&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/ctZGFTI3XI8" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>SpringOne Platform 2016 Replay: A lite Rx API for the JVM</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/01/16/springone-platform-2016-replay-a-lite-rx-api-for-the-jvm" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2017-01-17:2787</id>
-    <updated>2017-01-16T19:48:00Z</updated>
-    <content type="html">&lt;p&gt;Recorded at SpringOne Platform 2016.&lt;br/&gt;Speakers: Sebastien Deleuze, Stephane Maldini&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/a-lite-rx-api-for-the-jvm"&gt;http://www.slideshare.net/SpringCentral/a-lite-rx-api-for-the-jvm&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;RxJava is a fully fledged and widely used solution to develop Reactive applications, but some interesting alternatives exist. After an overview of the main Reactive APIs available and of Spring Boot Reactive support, this workshop introduces how to develop Reactive applications using Reactor Core 2.5-a powerful and fast alternative. We will learn how to use Flux (N values) and Mono (single value) types with various exercises. This new API (which is the core of Reactor 2.5) is a game changer in the world of Reactive API on the JVM thanks to its Reactive eXtensions-based API (natively based on Reactive Streams and Java 8) and its unmatched performance.&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Rrna-uwYL1o" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
   </entry>
 </feed>
