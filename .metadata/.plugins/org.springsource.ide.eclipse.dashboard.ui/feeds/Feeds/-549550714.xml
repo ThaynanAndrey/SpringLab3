@@ -5,7 +5,90 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-01-26T00:07:01Z</updated>
+  <updated>2017-01-26T16:39:44Z</updated>
+  <entry>
+    <title>Spring Boot 1.4.4 Available Now</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/01/26/spring-boot-1-4-4-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Stéphane Nicoll</name>
+    </author>
+    <id>tag:spring.io,2017-01-26:2816</id>
+    <updated>2017-01-26T16:39:44Z</updated>
+    <content type="html">&lt;p&gt;I am pleased to announce that Spring Boot &lt;code&gt;1.4.4&lt;/code&gt; has been released and is available now from &lt;a href="http://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.springframework.boot%22"&gt;Maven Central&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Spring Boot 1.4.4 includes &lt;a href="https://github.com/spring-projects/spring-boot/milestone/77?closed=1"&gt;over 60 fixes, improvements and 3rd party dependency updates&lt;/a&gt;! Thanks to all that have contributed!&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask at &lt;a href="http://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="http://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Data Release Train Ingalls Goes GA</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/01/26/spring-data-release-train-ingalls-goes-ga" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Oliver Gierke</name>
+    </author>
+    <id>tag:spring.io,2017-01-26:2814</id>
+    <updated>2017-01-26T14:14:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the Spring Data team I&amp;rsquo;d like to announce the general availability of our &lt;a href="https://en.wikipedia.org/wiki/Daniel_Henry_Holmes_Ingalls_Jr."&gt;Ingalls&lt;/a&gt; release train. After nine months of development, this release not only contains a huge set of new features, improvements and bug fixes, it also marks the conclusion of a branch of Spring Data that has helped developers dealing with persistence for more than 5 years &amp;mdash; even 8, if you count in some module&amp;rsquo;s predecessors.&lt;/p&gt;
+&lt;p&gt;The release ships more than 630 tickets fixed in total. Here&amp;rsquo;s a very truncated list of the most important features shipping with the release:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Upgrade to Spring 4.3 as Spring Framework baseline.&lt;/li&gt;
+  &lt;li&gt;Add Spring Data LDAP (the Spring Data related bits of Spring LDAP) to the release train.&lt;/li&gt;
+  &lt;li&gt;Elevate Spring Data for Apache Cassandra to a Core module, give it a complete overhaul and upgrade it to Cassandra 3. User defined types, support for Java 8 &lt;code&gt;Stream&lt;/code&gt; and &lt;code&gt;Optional&lt;/code&gt; etc.&lt;/li&gt;
+  &lt;li&gt;Performance improvements in object-to-store mapping by avoiding reflection in favor of ASM generated code using method handles.&lt;/li&gt;
+  &lt;li&gt;More aggregation framework for MongoDB.&lt;/li&gt;
+  &lt;li&gt;Improved stream execution verification in JPA (reports a missing surrounding transaction).&lt;/li&gt;
+  &lt;li&gt;Support for mapping XML and JSON payloads to projection interfaces.&lt;/li&gt;
+  &lt;li&gt;Any-match mode for our query-by-example support.&lt;/li&gt;
+  &lt;li&gt;Support for Redis Geo commands.&lt;/li&gt;
+  &lt;li&gt;CORS support in Spring Data REST.&lt;/li&gt;
+  &lt;li&gt;Support for Javaslang collection and map types as repository query method return types.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We&amp;rsquo;re gonna have a blog post ready casting more light on those features in a couple of days. Find a more complete but curated list of changes in our &lt;a href="https://github.com/spring-projects/spring-data-commons/wiki/Release-Train-Ingalls"&gt;release train wiki&lt;/a&gt;. The team&amp;rsquo;s focus is now shifting to our next generation Spring Data, starting with the Kay release train about to go GA in Q2 2017. Watch out for another milestone release of that coming soon. That in turn means, Ingalls will be included in the upcoming Spring Boot 1.5 release and the Spring Framework 4 based release train that&amp;rsquo;s going under primary maintenance going forward. Hopper is about to phase out to only see occasional updates for Spring Boot 1.4 releases.&lt;/p&gt;
+&lt;p&gt;To round things off, here&amp;rsquo;s the list of modules shipped:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Data Commons 1.13 GA - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-commons/1.13.0.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/commons/docs/1.13.0.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/commons/docs/1.13.0.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/commons/docs/1.13.0.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data JPA 1.11 GA - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-jpa/1.11.0.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/jpa/docs/1.11.0.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/jpa/docs/1.11.0.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/jpa/docs/1.11.0.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data KeyValue 1.2 GA - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-keyvalue/1.2.0.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/keyvalue/docs/1.2.0.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/keyvalue/docs/1.2.0.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/keyvalue/docs/1.2.0.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data for Apache Cassandra 1.5 GA - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-cassandra/1.5.0.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/cassandra/docs/1.5.0.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/cassandra/docs/1.5.0.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/cassandra/docs/1.5.0.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data for Apache Solr 2.1 GA - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-solr/2.1.0.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/solr/docs/2.1.0.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/solr/docs/2.1.0.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/solr/docs/2.1.0.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Gemfire 1.9 GA - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-gemfire/1.9.0.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/gemfire/docs/1.9.0.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/gemfire/docs/1.9.0.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/gemfire/docs/1.9.0.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Neo4j 4.2 GA - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-neo4j/4.2.0.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/neo4j/docs/4.2.0.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/neo4j/docs/4.2.0.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/neo4j/docs/4.2.0.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data MongoDB 1.10 GA - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-mongodb/1.10.0.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/mongodb/docs/1.10.0.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/mongodb/docs/1.10.0.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/mongodb/docs/1.10.0.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data LDAP 1.0 GA - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-ldap/1.0.0.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/ldap/docs/1.0.0.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/ldap/docs/1.0.0.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/ldap/docs/1.0.0.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Envers 1.1 GA - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-envers/1.1.0.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/envers/docs/1.1.0.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/envers/docs/1.1.0.RELEASE/reference/html"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data REST 2.6 GA - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-rest-webmvc/2.6.0.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/rest/docs/2.6.0.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/rest/docs/2.6.0.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/rest/docs/2.6.0.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Redis 1.8 GA - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-redis/1.8.0.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/redis/docs/1.8.0.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/redis/docs/1.8.0.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/redis/docs/1.8.0.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Elasticsearch 2.1 GA - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-elasticsearch/2.1.0.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/elasticsearch/docs/2.1.0.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/elasticsearch/docs/2.1.0.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/elasticsearch/docs/2.1.0.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Couchbase 2.2 GA - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-couchbase/2.2.0.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/2.2.0.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/2.2.0.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/2.2.0.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Data Release Train Hopper SR7 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/01/26/spring-data-release-train-hopper-sr7-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Oliver Gierke</name>
+    </author>
+    <id>tag:spring.io,2017-01-26:2813</id>
+    <updated>2017-01-26T12:16:09Z</updated>
+    <content type="html">&lt;p&gt;In preparation of the upcoming Spring Boot 1.4.4 release, I am pleased to announce the availability of the seventh service release of Spring Data release train Hopper. The release ships &lt;a href="https://jira.spring.io/issues/?filter=15466"&gt;39 tickets fixed&lt;/a&gt; and is a recommended upgrade for all users.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Data Commons 1.12.7 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-commons/1.12.7.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/commons/docs/1.12.7.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/commons/docs/1.12.7.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/commons/docs/1.12.7.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data JPA 1.10.7 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-jpa/1.10.7.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/jpa/docs/1.10.7.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/jpa/docs/1.10.7.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/jpa/docs/1.10.7.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data KeyValue 1.1.7 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-keyvalue/1.1.7.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/keyvalue/docs/1.1.7.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/keyvalue/docs/1.1.7.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/keyvalue/docs/1.1.7.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data for Apache Cassandra 1.4.7 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-cassandra/1.4.7.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/cassandra/docs/1.4.7.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/cassandra/docs/1.4.7.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/cassandra/docs/1.4.7.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data for Apache Solr 2.0.7 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-solr/2.0.7.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/solr/docs/2.0.7.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/solr/docs/2.0.7.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/solr/docs/2.0.7.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Gemfire 1.8.7 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-gemfire/1.8.7.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/gemfire/docs/1.8.7.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/gemfire/docs/1.8.7.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/gemfire/docs/1.8.7.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Neo4j 4.1.7 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-neo4j/4.1.7.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/neo4j/docs/4.1.7.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/neo4j/docs/4.1.7.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/neo4j/docs/4.1.7.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data MongoDB 1.9.7 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-mongodb/1.9.7.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/mongodb/docs/1.9.7.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/mongodb/docs/1.9.7.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/mongodb/docs/1.9.7.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Envers 1.0.7 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-envers/1.0.7.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/envers/docs/1.0.7.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/envers/docs/1.0.7.RELEASE/reference/html"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data REST 2.5.7 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-rest-webmvc/2.5.7.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/rest/docs/2.5.7.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/rest/docs/2.5.7.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/rest/docs/2.5.7.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Redis 1.7.7 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-redis/1.7.7.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/redis/docs/1.7.7.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/redis/docs/1.7.7.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/redis/docs/1.7.7.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Elasticsearch 2.0.7 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-elasticsearch/2.0.7.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/elasticsearch/docs/2.0.7.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/elasticsearch/docs/2.0.7.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/elasticsearch/docs/2.0.7.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Couchbase 2.1.7 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-couchbase/2.1.7.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/2.1.7.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/2.1.7.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/2.1.7.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>Spring Tips: Couchbase</title>
     <link rel="alternate" href="https://spring.io/blog/2017/01/26/spring-tips-couchbase" />
@@ -425,178 +508,5 @@ public Flux&amp;lt;String&amp;gt; uppercaseTransformer(Flux&amp;lt;String&amp;gt
 &lt;p&gt;As usual the releases are available as follows:&lt;br/&gt;* Brooklyn.SR2 in the &lt;a href="https://repo.spring.io/libs-release/org/springframework/cloud/spring-cloud-stream-dependencies/Brooklyn.SR2/"&gt;Spring Releases&lt;/a&gt; repository and &lt;a href="https://repo1.maven.org/maven2/org/springframework/cloud/spring-cloud-stream-dependencies/Brooklyn.SR2/"&gt;Maven Central&lt;/a&gt;;&lt;br/&gt;* Chelsea.M1 in the &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/cloud/spring-cloud-stream/1.2.0.M1/"&gt;Spring Milestone&lt;/a&gt; repository.&lt;/p&gt;
 &lt;p&gt;As always, you can stay in touch with us either in &lt;a href="https://github.com/spring-cloud/spring-cloud-stream"&gt;GitHub&lt;/a&gt;, on &lt;a href="http://stackoverflow.com/questions/tagged/spring-cloud-stream"&gt;Stack Overflow&lt;/a&gt;, on &lt;a href="https://gitter.im/spring-cloud/spring-cloud-stream"&gt;Gitter&lt;/a&gt;, or on &lt;a href="https://twitter.com/springcloud"&gt;Twitter&lt;/a&gt; (hashtag #SCStream).&lt;/p&gt;
 &lt;p&gt;This is also a reminder that the CFP for &lt;a href="http://2017.springio.net"&gt;Spring I/O&lt;/a&gt; is open. Spring I/O is the leading European conference focused on the Spring Framework ecosystem, and will take place in Barcelona in May 18-19, 2017. - if you think you have something interesting to say about Spring, submit a proposal! Spring I/O will also start selling tickets soon, so watch the site!&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring AMQP 1.7.0.RELEASE (and 1.6.7) Available</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/01/19/spring-amqp-1-7-0-release-and-1-6-7-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Gary Russell</name>
-    </author>
-    <id>tag:spring.io,2017-01-19:2791</id>
-    <updated>2017-01-19T20:12:48Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;On behalf of the Spring Integration team I’d like to announce that Spring AMQP &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10450&amp;amp;version=15856"&gt;1.7.0.RELEASE&lt;/a&gt; is now available.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;This release is mainly an intermediate version between &lt;code&gt;1.6.x&lt;/code&gt; and &lt;code&gt;2.0&lt;/code&gt; for Spring Boot &lt;code&gt;1.5&lt;/code&gt; and IO Platform &lt;code&gt;Brussels&lt;/code&gt; dependencies compatibility.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;However, there are several improvements and new features to explain here:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Upgrade to Amqp Client 4.0 with appropriate &lt;code&gt;RabbitConnectionFactoryBean&lt;/code&gt; changes&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Upgrade to Log4j 2.7 and required breaking change fix for the &lt;code&gt;log4j2.AmqpAppender&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Upgrade to Spring Retry 1.2 with important &lt;code&gt;StatefulRetryOperationsInterceptor.setUseRawKey(true)&lt;/code&gt; for backward compatibility&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;a new &lt;code&gt;spring-rabbit-junit&lt;/code&gt; artifact is provided with several utilities (like &lt;code&gt;BrokerRunning&lt;/code&gt; &lt;code&gt;@Rule&lt;/code&gt;) which can be useful for testing Spring AMQP applications&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The &lt;code&gt;SimpleMessageListenerContainer&lt;/code&gt; can now be started without queues to listen to at all.
-They can be provided later at runtime via &lt;code&gt;addQueues()&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;a &lt;code&gt;ConnectionNameStrategy&lt;/code&gt; is provided for the &lt;code&gt;ConnectionFactory&lt;/code&gt; to allow to identify application connections in the Broker or other monitoring and tracing tools&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;These were previously announced with the &lt;a href="https://spring.io/blog/2016/12/28/spring-amqp-1-7-rc1-available-now"&gt;release candidate&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;In addition; several bug fixes have been included as well as the addition of a new &lt;code&gt;CorrelationDataPostProcessor&lt;/code&gt; for the &lt;code&gt;RabbitTemplate&lt;/code&gt; to enable creation/update of correlation data for publisher confirms, after message conversion has occurred.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;This feature is also available in the &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10450&amp;amp;version=15854"&gt;1.6.7 Maintenance Release&lt;/a&gt;, which is also available now.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-amqp/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-amqp"&gt;GitHub&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-amqp"&gt;Help&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-amqp/reference/html/"&gt;Documentation&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-amqp"&gt;Chat&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Data Flow for Cloud Foundry 1.1 GA released</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/01/18/spring-cloud-data-flow-for-cloud-foundry-1-1-ga-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Eric Bottard</name>
-    </author>
-    <id>tag:spring.io,2017-01-09:2772</id>
-    <updated>2017-01-18T17:04:10Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;We are pleased to announce the general availability of &lt;a href="http://cloud.spring.io/spring-cloud-dataflow/"&gt;Spring Cloud Data Flow&lt;/a&gt; for Cloud Foundry version 1.1.0.RELEASE.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;In addition to all the bells and whistles of &lt;a href="https://spring.io/blog/2016/11/23/spring-cloud-data-flow-1-1-ga-released"&gt;Spring Cloud Data Flow 1.1.2&lt;/a&gt; that this release builds upon, the Cloud Foundry specifics include:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Memory Optimizations:&lt;/strong&gt; After much troubleshooting, we are pleased to deliver a memory efficient SCDF server in this release. With the changes now, regardless of how many stream/task deployments and concurrency, we have observed the memory usage of the server stay within the 200MB range as opposed to 1G or over to an eventual crash in previous 1.0.0.RELEASE. If you experienced spurious crashes previously, we highly recommend upgrading to 1.1.0.RELEASE right away.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Maven Cache and Disk Optimizations:&lt;/strong&gt; We have improved the way Maven caching is applied and used. There is a new LRU (Least Recently Used) design on top of the maven cache to allow us to be more proactive about the cache size as opposed to letting it grow indefinitely, which if not governed, leads to out of disk space errors for the application container where the server is running.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Tasks Support:&lt;/strong&gt; In the latest PCF 1.9 release, the Task component graduated from being experimental to production-ready feature capability. Spring Cloud Data Flow’s Task support for Cloud Foundry closely followed this development and with this release, we have removed the “experimental” clause from our side, too. Spring Cloud Data Flow’s Task support is production-ready when used on PCF 1.9. &lt;em&gt;One can still try this functionality on older PCF releases, PCF 1.8 for example, but the feature capabilities neither guaranteed nor supported on older PCF releases since is it classified as ”experimental”.&lt;/em&gt;&lt;/p&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The Task database schema changed slightly with this release. For folks upgrading from 1.0.0.RELEASE to 1.1.0.RELEASE, please review the &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/1.1.0.RELEASE/reference/htmlsingle/#configuration-rdbms"&gt;migration steps&lt;/a&gt; included in the reference guide.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Improved Error Handling:&lt;/strong&gt; Building on the latest version of the &lt;a href="https://github.com/spring-cloud/spring-cloud-deployer-cloudfoundry"&gt;Spring Cloud Deployer for Cloud Foundry project&lt;/a&gt;, interaction with the Cloud Controller REST API has been made more resilient, being more pro-active in dealing with the occasional server-side error.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;strong&gt;Important Notice:&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;There have been changes to the environment variables used by Spring Cloud Data Flow’s Cloud Foundry Server. Please make sure to review the &lt;a href="http://docs.spring.io/spring-cloud-dataflow-server-cloudfoundry/docs/1.1.0.RELEASE/reference/htmlsingle/#_configuration_reference"&gt;reference guide&lt;/a&gt; for the latest changes to the environment variables.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The random app name generation feature gets an update. If this feature is enabled, you’ll notice that the name stays within the 63 character limit, to comply with RFC1035 when used as a hostname.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;strong&gt;Get Started!&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Head over to the &lt;a href="http://cloud.spring.io/spring-cloud-dataflow-server-cloudfoundry/"&gt;Spring Cloud Data Flow for Cloud Foundry project page&lt;/a&gt; and follow the &lt;strong&gt;Quick Start&lt;/strong&gt; section. Be sure to browse the &lt;a href="http://docs.spring.io/spring-cloud-dataflow-server-cloudfoundry/docs/1.1.0.RELEASE/reference/htmlsingle/"&gt;reference documentation&lt;/a&gt; for this release.&lt;/p&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Integration Extension for SMB 0.5.0 is Available</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/01/18/spring-integration-extension-for-smb-0-5-0-is-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Artem Bilan</name>
-    </author>
-    <id>tag:spring.io,2017-01-18:2790</id>
-    <updated>2017-01-18T16:03:52Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;On behalf of the Spring Integration team I’d like to announce release of one more Spring Integration Extension.
-This time it is Spring Integration for &lt;a href="https://en.wikipedia.org/wiki/Server_Message_Block"&gt;Server Message Block&lt;/a&gt; and its artifact is &lt;code&gt;spring-integration-smb.0.5.0.RELEASE&lt;/code&gt;, which is available in the &lt;a href="https://repo.spring.io/release/"&gt;Release Repository&lt;/a&gt; and Maven Central.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The project has been around for some time but only recently gained enough community traction to warrant a release.
-So, first of all, big thanks to you, the community, for your contributions!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The &lt;a href="https://jcifs.samba.org/"&gt;Java CIFS Client Library&lt;/a&gt; has been chosen as a Java implementation for the CIFS/SMB networking protocol.
-Its &lt;code&gt;SmbFile&lt;/code&gt; abstraction is simply wrapped to the Spring Integration "Remote File" foundations like &lt;code&gt;SmbSession&lt;/code&gt;, &lt;code&gt;SmbRemoteFileTemplate&lt;/code&gt; etc.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The SMB Channel Adapters and support classes implementations are fully similar to existing components for &lt;a href="http://docs.spring.io/spring-integration/reference/html/ftp.html"&gt;(S)FTP&lt;/a&gt; or &lt;a href="https://github.com/spring-projects/spring-integration-aws"&gt;AWS S3&lt;/a&gt; protocols.
-So, if you familiar with those components, it is pretty straightforward to use this extension.
-But any way here are several words about existing components:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="smb-inbound-channel-adapter"&gt;&lt;a class="anchor" href="#smb-inbound-channel-adapter"&gt;&lt;/a&gt;SMB Inbound Channel Adapter&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;To download SMB files locally the &lt;code&gt;SmbInboundFileSynchronizingMessageSource&lt;/code&gt; is provided.
-It is simple extension of the &lt;code&gt;AbstractInboundFileSynchronizingMessageSource&lt;/code&gt; which requires &lt;code&gt;SmbInboundFileSynchronizer&lt;/code&gt; injection.
-For filtering remote files you still can use any existing &lt;code&gt;FileListFilter&lt;/code&gt; implementations, but particular &lt;code&gt;SmbRegexPatternFileListFilter&lt;/code&gt; and &lt;code&gt;SmbSimplePatternFileListFilter&lt;/code&gt; are provided.
-For XML configuration the &lt;code&gt;&amp;lt;int-smb:inbound-channel-adapter&amp;gt;&lt;/code&gt; component is provided.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="smb-outbound-channel-adapter"&gt;&lt;a class="anchor" href="#smb-outbound-channel-adapter"&gt;&lt;/a&gt;SMB Outbound Channel Adapter&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;There is no (yet) some SMB specific requirements for files transferring to SMB, so for XML &lt;code&gt;&amp;lt;int-smb:outbound-channel-adapter&amp;gt;&lt;/code&gt; component we simply reuse an existing &lt;code&gt;FileTransferringMessageHandler&lt;/code&gt;.
-In case of Java configuration that &lt;code&gt;FileTransferringMessageHandler&lt;/code&gt; should be supplied with the &lt;code&gt;SmbSessionFactory&lt;/code&gt; (or &lt;code&gt;SmbRemoteFileTemplate&lt;/code&gt;) and that all!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@ServiceActivator(inputChannel = "storeToSmb")
-@Bean
-public MessageHandler smbMessageHandler(SmbSessionFactory smbSessionFactory) {
-    FileTransferringMessageHandler&amp;lt;SmbFile&amp;gt; handler =
-                new FileTransferringMessageHandler&amp;lt;&amp;gt;(smbSessionFactory);
-    handler.setRemoteDirectoryExpression(
-                new LiteralExpression("remote-target-dir"));
-    handler.setFileNameGenerator(m -&amp;gt;
-                m.getHeaders().get(FileHeaders.FILENAME, String.class) + ".test");
-    handler.setAutoCreateDirectory(true);
-    return handler;
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;We would like to hear any feedback from the Community before we go straight forward to the &lt;code&gt;1.0.0.RELEASE&lt;/code&gt;, so, do not hesitate to contact with us via any available communication channel!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-integration-extensions/tree/master/spring-integration-smb"&gt;Project Page&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-integration"&gt;Help&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-integration"&gt;Chat&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</content>
   </entry>
 </feed>

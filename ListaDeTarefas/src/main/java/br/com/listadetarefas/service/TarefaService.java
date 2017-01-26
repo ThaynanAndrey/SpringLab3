@@ -31,5 +31,5 @@ public class TarefaService {
 	public Tarefa buscaPorId(Long id) {
 		
 		return this.tarefaRepository.findOne(id);
-	}	
+	}
 }

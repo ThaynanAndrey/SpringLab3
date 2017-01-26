@@ -24,11 +24,19 @@ public class TarefaController {
 	// Routes (End Points)
 	
 	@RequestMapping(method=RequestMethod.GET, value="/tarefas", produces=MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Collection<Tarefa>> retornarClientes() {
+	public ResponseEntity<Collection<Tarefa>> retornarTarefas() {
 		
 		Collection<Tarefa> tarefas = tarefaService.buscaTarefas();
 		
 		return new ResponseEntity<>(tarefas, HttpStatus.OK);
+	}
+	
+	@RequestMapping(method=RequestMethod.GET, value="/tarefas/{id}", produces=MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Tarefa> retornaTarefaEspecifica(@PathVariable Long id) {
+		
+		Tarefa tarefa = tarefaService.buscaPorId(id);
+		
+		return new ResponseEntity<>(tarefa, HttpStatus.OK);
 	}
 	
 	@RequestMapping(method=RequestMethod.POST, value="/tarefas", consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)

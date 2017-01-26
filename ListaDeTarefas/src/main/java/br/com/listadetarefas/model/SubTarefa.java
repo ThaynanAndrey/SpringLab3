@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -25,6 +27,10 @@ public class SubTarefa {
 	
 	@Column(name="realizada")
 	private Boolean realizada;
+	
+	@ManyToOne(optional = false)
+    @JoinColumn(name = "tarefa", referencedColumnName = "id")
+    private Tarefa tarefa;
 	
 	public SubTarefa() {
 		// default

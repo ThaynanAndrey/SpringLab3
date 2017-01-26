@@ -31,10 +31,10 @@ public class Tarefa {
 	private String descricao;
 	
 	@Column(name="PRIORIDADE")
-	private Prioridade prioridade;
+	private String prioridade;
 
 	@Column(name="CATEGORIA")
-	private Categoria categoria;
+	private String categoria;
 	
 	@Column(name="realizada")
 	private Boolean realizada;
@@ -46,7 +46,7 @@ public class Tarefa {
 		// default
 	}
 	
-	public Tarefa(String nome, String descricao, Prioridade prioridade, Categoria categoria) {
+	public Tarefa(String nome, String descricao, String prioridade, String categoria) {
 		this.nome = nome;
 	}
 	
@@ -74,19 +74,19 @@ public class Tarefa {
 		this.descricao = descricao;
 	}
 
-	public Prioridade getPrioridade() {
+	public String getPrioridade() {
 		return prioridade;
 	}
 
-	public void setPrioridade(Prioridade prioridade) {
+	public void setPrioridade(String prioridade) {
 		this.prioridade = prioridade;
 	}
 
-	public Categoria getCategoria() {
+	public String getCategoria() {
 		return categoria;
 	}
 
-	public void setCategoria(Categoria categoria) {
+	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
 	

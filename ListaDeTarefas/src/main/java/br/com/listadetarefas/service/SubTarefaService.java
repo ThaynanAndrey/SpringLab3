@@ -19,7 +19,7 @@ public class SubTarefaService {
 		return subTarefaRepository.save(subTarefa);
 	}
 	
-	public Collection<SubTarefa> buscaSubTarefa() {
+	public Collection<SubTarefa> buscaSubTarefas() {
 		
 		return this.subTarefaRepository.findAll();
 	}
