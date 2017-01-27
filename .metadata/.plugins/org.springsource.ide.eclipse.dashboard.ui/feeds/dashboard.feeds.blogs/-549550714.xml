@@ -113,10 +113,12 @@
     <updated>2017-01-25T21:53:00Z</updated>
     <content type="html">&lt;p&gt;Join the Spring Team at the 1st ever &lt;a href="https://devoxx.us"&gt;Devoxx event&lt;/a&gt; in the United States on March 21-23, 2017!&lt;br/&gt;&lt;a href="http://pivotal.io"&gt;Pivotal&lt;/a&gt; is sponsoring and will be at booth # 104 from 10am-8pm on Tuesday March 21st, and 9:45am - 4:30pm on Wednesday March 22rd.&lt;/p&gt;
 &lt;p&gt;We will have experts available to talk to you about Spring Boot, Spring Cloud, Spring Cloud Data Flow, Cloud Foundry, and much more. Stop by and learn about Cloud Native Java from the leaders at Pivotal.&lt;/p&gt;
-&lt;p&gt;Don&amp;rsquo;t miss talks from Spring leaders on Cloud-Native, Reactive Spring, and Big Data!&lt;/p&gt;
+&lt;p&gt;Don&amp;rsquo;t miss talks from Spring leaders on Cloud-Native, Reactive Spring, Eclipse and Big Data!&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://cfp.devoxx.us/2017/talk/XIA-0432/Cloud_Native_Java"&gt;Cloud Native Java with Josh Long&lt;/a&gt;&lt;br/&gt;Room 7 - Tuesday from 11:30 AM til 12:20 PM&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://cfp.devoxx.us/2017/talk/JXY-6860/Reactive_Spring"&gt;Reactive Spring with Josh Long and Mark Heckler&lt;/a&gt;&lt;br/&gt;Room 1 - Tuesday from 3:00 PM til 3:50 PM&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://cfp.devoxx.us/2017/talk/WHT-4635/Navigate_All_the_Knowledge"&gt;Navigate All the Knowledge with James Weaver&lt;/a&gt;&lt;br/&gt;Room 2 - Wednesday from 2:30 PM til 3:20 PM&lt;/p&gt;</content>
+&lt;p&gt;&lt;a href="http://cfp.devoxx.us/2017/talk/WHT-4635/Navigate_All_the_Knowledge"&gt;Navigate All the Knowledge with James Weaver&lt;/a&gt;&lt;br/&gt;Room 2 - Wednesday from 2:30 PM til 3:20 PM&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://cfp.devoxx.us/2017/talk/FVI-4576/Next_Level_Spring_Boot_Tooling"&gt;Next Level Spring Boot Tooling with Martin Lippert&lt;/a&gt;&lt;br/&gt;Room 7 - Wednesday from 3:30 PM til 4:00 PM&lt;/p&gt;
+&lt;p&gt;If you are attending Eclipse Converge, Martin Lippert will also be presenting&lt;br/&gt;&lt;a href="https://www.eclipseconverge.org/na2017/session/sneak-peek-spring-boot-language-server"&gt;A sneak peek into the Spring Boot language server&lt;/a&gt;&lt;br/&gt;Room C - Monday, March 20, 2017 - 15:45 to 16:20&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Spring Integration 4.3.7 is Available</title>
@@ -255,22 +257,6 @@
 &lt;p&gt;This session will overview how to debug latency problems, using call graphs created by Zipkin. We&amp;rsquo;ll use trace zipkin itself, setting up from scratch using docker. While we&amp;rsquo;re at it, we&amp;rsquo;ll discuss how the model works, and how to safely trace production. Finally, we&amp;rsquo;ll overview the ecosystem, including tools to trace ruby, c#, java and spring boot apps.&lt;/p&gt;
 &lt;p&gt;When you leave, you&amp;rsquo;ll at least know something about distributed tracing, and hopefully be on your way to blaming things for causing latency!&lt;/p&gt;
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/jkSm-652UPo" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>SpringOne Platform 2016 Replay: Moving from Monolithic Architecture to Spring Cloud and Microservices</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/01/23/springone-platform-2016-replay-moving-from-monolithic-architecture-to-spring-cloud-and-microservices" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2017-01-24:2798</id>
-    <updated>2017-01-23T22:36:00Z</updated>
-    <content type="html">&lt;p&gt;Recorded at SpringOne Platform 2016.&lt;br/&gt;Speakers: Travis Cherry, Mary Ann Wayer Premier Inc&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/moving-from-monolithic-architecture-to-spring-cloud-and-microservices"&gt;http://www.slideshare.net/SpringCentral/moving-from-monolithic-architecture-to-spring-cloud-and-microservices&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Premier, Inc. (NASDAQ: PINC) is a healthcare performance improvement alliance of approximately 3,600 U.S. hospitals and 120,000 other providers. Our mission is simple: To improve the health of communities.&lt;/p&gt;
-&lt;p&gt;We develop SaaS solutions that help healthcare organizations provide higher quality and safer care to patients, lower costs, improve the satisfaction of patients and their families and that stay current with changes in care delivery. We are in a constant state of evolving our solutions and associated technology stack to stay current with modern web app architectural patterns.&lt;/p&gt;
-&lt;p&gt;In this session, we will discuss the following:&lt;/p&gt;
-&lt;p&gt;Our historical monolithic architectural patterns, building applications for jBoss with server-side rendering&lt;br/&gt;Our experiences and lessons learned moving to Spring MVC single page apps&lt;br/&gt;Our decision to move to a microservices oriented architecture, and how we leveraged Spring Boot to get there&lt;br/&gt;How we use Netflix OSS / Spring Cloud to handle the new complexities of a microservices architecture&lt;br/&gt;Using Spring Cloud Config Server to drive application configuration and a metadata-driven user interface&lt;br/&gt;Implementing Eureka for service registry / discovery&lt;br/&gt;Securing and automating deployments for a Spring Cloud infrastructure with Bamboo&lt;br/&gt;Overall lessons learned in our evolution to a Spring Cloud microservice oriented architecture&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/3TvI_tD7fok" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
   </entry>
   <entry>
     <title>SpringOne Platform 2016 Replay: Implementing Microservices tracing with Spring Cloud and Zipkin</title>
@@ -508,5 +494,59 @@ public Flux&amp;lt;String&amp;gt; uppercaseTransformer(Flux&amp;lt;String&amp;gt
 &lt;p&gt;As usual the releases are available as follows:&lt;br/&gt;* Brooklyn.SR2 in the &lt;a href="https://repo.spring.io/libs-release/org/springframework/cloud/spring-cloud-stream-dependencies/Brooklyn.SR2/"&gt;Spring Releases&lt;/a&gt; repository and &lt;a href="https://repo1.maven.org/maven2/org/springframework/cloud/spring-cloud-stream-dependencies/Brooklyn.SR2/"&gt;Maven Central&lt;/a&gt;;&lt;br/&gt;* Chelsea.M1 in the &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/cloud/spring-cloud-stream/1.2.0.M1/"&gt;Spring Milestone&lt;/a&gt; repository.&lt;/p&gt;
 &lt;p&gt;As always, you can stay in touch with us either in &lt;a href="https://github.com/spring-cloud/spring-cloud-stream"&gt;GitHub&lt;/a&gt;, on &lt;a href="http://stackoverflow.com/questions/tagged/spring-cloud-stream"&gt;Stack Overflow&lt;/a&gt;, on &lt;a href="https://gitter.im/spring-cloud/spring-cloud-stream"&gt;Gitter&lt;/a&gt;, or on &lt;a href="https://twitter.com/springcloud"&gt;Twitter&lt;/a&gt; (hashtag #SCStream).&lt;/p&gt;
 &lt;p&gt;This is also a reminder that the CFP for &lt;a href="http://2017.springio.net"&gt;Spring I/O&lt;/a&gt; is open. Spring I/O is the leading European conference focused on the Spring Framework ecosystem, and will take place in Barcelona in May 18-19, 2017. - if you think you have something interesting to say about Spring, submit a proposal! Spring I/O will also start selling tickets soon, so watch the site!&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring AMQP 1.7.0.RELEASE (and 1.6.7) Available</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/01/19/spring-amqp-1-7-0-release-and-1-6-7-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Gary Russell</name>
+    </author>
+    <id>tag:spring.io,2017-01-19:2791</id>
+    <updated>2017-01-19T20:12:48Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;On behalf of the Spring Integration team I’d like to announce that Spring AMQP &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10450&amp;amp;version=15856"&gt;1.7.0.RELEASE&lt;/a&gt; is now available.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This release is mainly an intermediate version between &lt;code&gt;1.6.x&lt;/code&gt; and &lt;code&gt;2.0&lt;/code&gt; for Spring Boot &lt;code&gt;1.5&lt;/code&gt; and IO Platform &lt;code&gt;Brussels&lt;/code&gt; dependencies compatibility.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;However, there are several improvements and new features to explain here:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Upgrade to Amqp Client 4.0 with appropriate &lt;code&gt;RabbitConnectionFactoryBean&lt;/code&gt; changes&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Upgrade to Log4j 2.7 and required breaking change fix for the &lt;code&gt;log4j2.AmqpAppender&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Upgrade to Spring Retry 1.2 with important &lt;code&gt;StatefulRetryOperationsInterceptor.setUseRawKey(true)&lt;/code&gt; for backward compatibility&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;a new &lt;code&gt;spring-rabbit-junit&lt;/code&gt; artifact is provided with several utilities (like &lt;code&gt;BrokerRunning&lt;/code&gt; &lt;code&gt;@Rule&lt;/code&gt;) which can be useful for testing Spring AMQP applications&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;code&gt;SimpleMessageListenerContainer&lt;/code&gt; can now be started without queues to listen to at all.
+They can be provided later at runtime via &lt;code&gt;addQueues()&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;a &lt;code&gt;ConnectionNameStrategy&lt;/code&gt; is provided for the &lt;code&gt;ConnectionFactory&lt;/code&gt; to allow to identify application connections in the Broker or other monitoring and tracing tools&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;These were previously announced with the &lt;a href="https://spring.io/blog/2016/12/28/spring-amqp-1-7-rc1-available-now"&gt;release candidate&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;In addition; several bug fixes have been included as well as the addition of a new &lt;code&gt;CorrelationDataPostProcessor&lt;/code&gt; for the &lt;code&gt;RabbitTemplate&lt;/code&gt; to enable creation/update of correlation data for publisher confirms, after message conversion has occurred.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This feature is also available in the &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10450&amp;amp;version=15854"&gt;1.6.7 Maintenance Release&lt;/a&gt;, which is also available now.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-amqp/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-amqp"&gt;GitHub&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-amqp"&gt;Help&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-amqp/reference/html/"&gt;Documentation&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-amqp"&gt;Chat&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</content>
   </entry>
 </feed>
