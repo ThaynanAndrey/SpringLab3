@@ -28,7 +28,7 @@ public class SubTarefa {
 	@Column(name="realizada")
 	private Boolean realizada;
 	
-	@ManyToOne(optional = false)
+	@ManyToOne
     @JoinColumn(name = "tarefa", referencedColumnName = "id")
     private Tarefa tarefa;
 	

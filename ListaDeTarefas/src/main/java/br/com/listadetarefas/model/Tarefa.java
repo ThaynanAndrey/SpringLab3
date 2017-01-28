@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -39,7 +40,7 @@ public class Tarefa {
 	@Column(name="realizada")
 	private Boolean realizada;
 
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "tarefa")
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "tarefa")
     private List<SubTarefa> subtarefas;
 	
 	public Tarefa() {
