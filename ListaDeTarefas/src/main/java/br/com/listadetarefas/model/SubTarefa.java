@@ -17,6 +17,7 @@ import org.hibernate.validator.constraints.NotBlank;
 public class SubTarefa {
 
 	@Id
+	@Column(name="SUB_TAREFA_ID")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
@@ -29,7 +30,7 @@ public class SubTarefa {
 	private Boolean realizada;
 	
 	@ManyToOne
-    @JoinColumn(name = "tarefa", referencedColumnName = "id")
+    @JoinColumn(name = "TAREFA_ID")
     private Tarefa tarefa;
 	
 	public SubTarefa() {

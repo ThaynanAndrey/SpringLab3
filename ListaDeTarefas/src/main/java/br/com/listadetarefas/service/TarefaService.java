@@ -28,8 +28,11 @@ public class TarefaService {
 		this.tarefaRepository.delete(tarefa);
 	}
 	
+	public void excluirTodasTarefas() {
+		this.tarefaRepository.deleteAll();
+	}
+	
 	public Tarefa buscaPorId(Long id) {
-		
 		return this.tarefaRepository.findOne(id);
 	}
 }

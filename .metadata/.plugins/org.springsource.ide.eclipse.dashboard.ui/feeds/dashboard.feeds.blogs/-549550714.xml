@@ -5,7 +5,752 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-01-26T16:39:44Z</updated>
+  <updated>2017-01-30T23:59:05Z</updated>
+  <entry>
+    <title>Spring Boot 1.5.1 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/01/30/spring-boot-1-5-1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Andy Wilkinson</name>
+    </author>
+    <id>tag:spring.io,2017-01-26:2815</id>
+    <updated>2017-01-30T23:59:05Z</updated>
+    <content type="html">&lt;p&gt;One behalf of the Spring Boot team, and everyone that has contributed, I am pleased to announce that Spring Boot 1.5.1 has been released and is available now from &lt;a href="http://repo.spring.io/release/"&gt;repo.spring.io&lt;/a&gt;, &lt;a href="http://search.maven.org/#search|ga|1|g%3A%22org.springframework.boot%22"&gt;Maven Central&lt;/a&gt; and &lt;a href="https://bintray.com/bintray/jcenter/org.springframework.boot%3Aspring-boot/view"&gt;Bintray&lt;/a&gt;. This release adds a significant number of new features and improvements. For full &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-1.5-Release-Notes#upgrading-from-spring-boot-14"&gt;upgrade instructions&lt;/a&gt; and &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-1.5-Release-Notes#new-and-noteworthy"&gt;&amp;ldquo;new and noteworthy&amp;rdquo;&lt;/a&gt; features please see the &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-1.5-Release-Notes"&gt;release notes&lt;/a&gt;.&lt;/p&gt;&lt;h1&gt;&lt;a href="#what-rsquo-s-new-in-1-5" class="anchor" name="what-rsquo-s-new-in-1-5"&gt;&lt;/a&gt;What&amp;rsquo;s new in 1.5&lt;/h1&gt;&lt;h2&gt;&lt;a href="#apache-kafka-support" class="anchor" name="apache-kafka-support"&gt;&lt;/a&gt;Apache Kafka Support&lt;/h2&gt;
+&lt;p&gt;Spring Boot 1.5 include auto-configuration support for Apache Kafka via the spring-kafka project. To use Kafka simple include the &lt;code&gt;spring-kafka&lt;/code&gt; depenency and configure the appropriate &lt;code&gt;spring.kafka.*&lt;/code&gt; application properties.&lt;/p&gt;&lt;h2&gt;&lt;a href="#cloud-foundry-actuator-extensions" class="anchor" name="cloud-foundry-actuator-extensions"&gt;&lt;/a&gt;Cloud Foundry actuator extensions&lt;/h2&gt;
+&lt;p&gt;Spring Boot’s actuator module now includes additional support that is activated when you deploy to a compatible Cloud Foundry instance. The &lt;code&gt;/cloudfoundryapplication&lt;/code&gt; path provides an alternative secured route to all &lt;code&gt;NamedMvcEndpoint&lt;/code&gt; beans.&lt;/p&gt;
+&lt;p&gt;Cloud Foundry management UIs can make use of the endpoint to display additional actuator information. For example, Pivotal Cloud Foundry shows health information next to the application status. Please see &lt;a href="https://content.pivotal.io/blog/pivotal-cloud-foundry-1-9-sets-the-bar-on-massive-scale"&gt;this blog post&lt;/a&gt; about Pivotal Cloud Foundry 1.9 for further details.&lt;/p&gt;&lt;h2&gt;&lt;a href="#spring-data-ingalls" class="anchor" name="spring-data-ingalls"&gt;&lt;/a&gt;Spring Data Ingalls&lt;/h2&gt;
+&lt;p&gt;Spring Boot 1.5 ships with the recently announced Spring Data Ingalls. Please refer to the &lt;a href="https://spring.io/blog/2017/01/26/spring-data-release-train-ingalls-goes-ga"&gt;announcement blog post&lt;/a&gt; to learn about all its new features.&lt;/p&gt;&lt;h2&gt;&lt;a href="#ldap-support" class="anchor" name="ldap-support"&gt;&lt;/a&gt;LDAP support&lt;/h2&gt;
+&lt;p&gt;Spring Boot now offers auto-configuration for any compliant LDAP server as well as support for the embedded in-memory LDAP server from &lt;a href="https://www.ldap.com/unboundid-ldap-sdk-for-java"&gt;UnboundID&lt;/a&gt;. Please see the &lt;a href="http://docs.spring.io/spring-boot/docs/1.5.0.RELEASE/reference/htmlsingle/#boot-features-ldap"&gt;documentation&lt;/a&gt; for more details.&lt;/p&gt;&lt;h2&gt;&lt;a href="#loggers-endpoint" class="anchor" name="loggers-endpoint"&gt;&lt;/a&gt;Loggers endpoint&lt;/h2&gt;
+&lt;p&gt;A new actuator loggers endpoint allows you to view and change application logging levels on the fly. Both JMX and MVC endpoints are available. For example, to change the logging level with the MVC endpoint, you can issue a POST to /loggers/com.yourcorp.application with the following JSON:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;{&#xD;
+  &amp;quot;configuredLevel&amp;quot;: &amp;quot;DEBUG&amp;quot;&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To update the logger using the JMX endpoint you would use the &lt;code&gt;setLogLevel&lt;/code&gt; operation. Please see the &lt;a href="http://docs.spring.io/spring-boot/docs/1.5.0.RELEASE/reference/htmlsingle/#production-ready-loggers"&gt;documentation&lt;/a&gt; for further details.&lt;/p&gt;&lt;h2&gt;&lt;a href="#other-changes" class="anchor" name="other-changes"&gt;&lt;/a&gt;Other changes&lt;/h2&gt;
+&lt;p&gt;There&amp;rsquo;s a whole host of other changes and improvements that are documented in the &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-1.5-Release-Notes"&gt;Release Notes&lt;/a&gt;. You can also find a list of deprecated classes and methods that we plan to remove in the next version.&lt;/p&gt;&lt;h1&gt;&lt;a href="#thank-you" class="anchor" name="thank-you"&gt;&lt;/a&gt;Thank you&lt;/h1&gt;
+&lt;br/&gt;
+&lt;p&gt;We want to take this opportunity to again thank all our users and contributors. We&amp;rsquo;ve now had over &lt;a href="https://github.com/spring-projects/spring-boot/graphs/contributors"&gt;320 people&lt;/a&gt; submit code, and there have been over &lt;a href="https://github.com/spring-projects/spring-boot/commits/master"&gt;10000 commits&lt;/a&gt; to the project.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask at &lt;a href="http://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="http://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;on Gitter&lt;/a&gt;.&lt;/p&gt;&lt;h3&gt;&lt;a href="#what-happened-to-1-5-0" class="anchor" name="what-happened-to-1-5-0"&gt;&lt;/a&gt;What happened to 1.5.0?&lt;/h3&gt;
+&lt;p&gt;We noticed &lt;a href="https://github.com/spring-projects/spring-boot/issues/8136"&gt;a problem&lt;/a&gt; with 1.5.0.RELEASE after it had been synced to Maven Central. Rather than requiring an exclusion for the incorrectly scoped dependency, we opted to fix it and release 1.5.1.RELEASE instead.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>What's New in Spring Data Release Ingalls?</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/01/30/what-s-new-in-spring-data-release-ingalls" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Mark Paluch</name>
+    </author>
+    <id>tag:spring.io,2017-01-24:2804</id>
+    <updated>2017-01-30T12:47:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;As you probably have seen, we have &lt;a href="https://spring.io/blog/2017/01/26/spring-data-release-train-ingalls-goes-ga"&gt;just announced&lt;/a&gt; the GA release of Spring Data release train Ingalls.
+As the release is packed with way too many features to cover them in a release announcement, I would like to use this post to take a deeper look at the changes and features that come with the 15 modules on the train.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="housekeeping"&gt;&lt;a class="anchor" href="#housekeeping"&gt;&lt;/a&gt;Housekeeping&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;A very fundamental change in the release train&amp;#8217;s dependencies is the upgrade to Spring Framework 4.3 (currently 4.3.6) as the baseline.
+Other dependency upgrades are mostly driven by major version bumps of the underlying store drivers and implementations that need to be reflected in potential breaking changes to the API exposed by those modules.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Ingalls also ships with a new Spring Data Module: Spring Data LDAP.
+The Spring LDAP project has shipped Spring Data repository support for quite a while.
+After a couple of glitches and incompatibilities we decided to move LDAP repository support into a separate Spring Data module so that it is more closely aligned to the release train.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Another big change to the module setup is that Spring Data for Apache Cassandra has now become a core module, which means it now has been and is going to be maintained by the Spring Data team at Pivotal.
+A great chance to thank the previous core maintainers David Webb and Matthew T. Adams for all their efforts.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Besides those very fundamental changes, the team has been working on a whole bunch of new features:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Use of method handles for property access in conversion subsystem.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Support for XML and JSON based projections for REST payloads (Commons)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cross-origin resource sharing with Spring Data REST&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;More MongoDB Aggregation Framework operators for array, arithmetic, date and set operations.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Support for Redis Geo commands.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Upgrade to Cassandra 3.0 with support for query derivation in repository query methods, User-defined types, Java 8 types (Optional, Stream), JSR-310 and ThreeTen Backport.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Support for Javaslang&amp;#8217;s &lt;code&gt;Option&lt;/code&gt;, collection and map types for repository query methods.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;These are the ones that I would like to discuss in the remainder of this post.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="performance-improvements"&gt;&lt;a class="anchor" href="#performance-improvements"&gt;&lt;/a&gt;Performance improvements&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="sect2"&gt;
+&lt;h3 id="methodhandles-for-improved-object-access"&gt;&lt;a class="anchor" href="#methodhandles-for-improved-object-access"&gt;&lt;/a&gt;MethodHandles for improved object access&lt;/h3&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;A major theme of our release train was to improve the performance in how our object-to-store mapping subsystem accesses data from domain classes.
+Traditionally, Spring Data has used reflection for that, either inspecting the fields directly or invoking accessor methods of properties.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Although the perfomance of reflection has significantly improved in Java 8, there is still a different way that we can use to even bring the performance close to native access: &lt;code&gt;MethodHandle&lt;/code&gt;s.
+They are especially fast to use if they are held in static fields of a class, which poses a bit of a challenge to us as we do not know about the structure the domain types you want to persist beforehand.
+However, we already apply a similar kind of optimization to the creation of domain object instances by using ASM to generate tailor made factories that invoke constructors directly.
+We now went ahead and applied the same idea to our &lt;code&gt;PersistentPropertyAccessor&lt;/code&gt; implementations: we inspect the types and ASM-generate a class that holds static final &lt;code&gt;MethodHandle&lt;/code&gt;s, that our API to read and write properties then use to avoid reflection.
+In case the classes expose public API (e.g. accessors) we just use those.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;In case you are interested, the implementation code can be found &lt;a href="https://github.com/spring-projects/spring-data-commons/blob/17366031071c68ddb87a9de1debac6f1dda85524/src/main/java/org/springframework/data/mapping/model/ClassGeneratingPropertyAccessorFactory.java"&gt;here&lt;/a&gt;.
+However, brace yourselves, ASM code might feel a bit complicated to read.
+All Spring Data modules using the object-to-store mapping benefit from this change (i.e. JPA does not) if you are running at least Java 7. You can find more details in the &lt;a href="https://jira.spring.io/browse/DATACMNS-809"&gt;ticket requesting that change&lt;/a&gt;.
+We have seen performance improvements from 20 to 70%.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect2"&gt;
+&lt;h3 id="domain-event-publication-from-aggregate-roots"&gt;&lt;a class="anchor" href="#domain-event-publication-from-aggregate-roots"&gt;&lt;/a&gt;Domain event publication from aggregate roots&lt;/h3&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/#context-functionality-events"&gt;Spring Application Events&lt;/a&gt; are usually used to publish technical events within an application. However, they&amp;#8217;re also a great tool to decouple parts of a system by using the infrastructure for domain events. This is usually implemented like that:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;class OrderManagement {
+
+  private final ApplicationEventPublisher publisher;
+  private final OrderRepository orders;
+
+  @Transactional
+  void completeOrder(Order order) {
+
+    OrderCompletedEvent event = order.complete();
+    orders.save(order);
+    publisher.publish(event);
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;See how the aggregate root produces an event which a service component then publishes via Spring&amp;#8217;s &lt;code&gt;ApplicationEventPublisher&lt;/code&gt;. The pattern is a nice one in general but involves quite a bit of ceremony and introduces a technical framework dependency in a business component which one might like to avoid.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;With the Spring Data Ingalls release train, repositories now inspect the aggregates handed to &lt;code&gt;save(…)&lt;/code&gt; methods for the aggregate method annotation &lt;code&gt;@DomainEvents&lt;/code&gt;, invokes that method and automatically publishes the returned objects via the event publisher. So assuming an &lt;code&gt;Order.complete()&lt;/code&gt; implementation looking something like this (&lt;code&gt;AbstractAggregateRoot&lt;/code&gt; is a Spring Data provided type containing the annotated methods):&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;class Order extends AbstractAggregateRoot {
+
+  Order complete() {
+    register(new OrderCompletedEvent(this));
+    return this;
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;the client code can be simplified to&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;class OrderManagement {
+
+  private final OrderRepository orders;
+
+  @Transactional
+  void completeOrder(Order order) {
+    repository.save(order.complete());
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;As you can see, there are no references to Spring infrastructure anymore. The event publication is taken care of by the component responsible for it: the aggregate root. Read more about that new mechanism in the &lt;a href="http://docs.spring.io/spring-data/commons/docs/current/reference/html/#core.domain-events"&gt;reference documentation&lt;/a&gt;. There are more advanced ideas regarding domain events circling around in the team currently. Watch this space for further updates.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect2"&gt;
+&lt;h3 id="pagination"&gt;&lt;a class="anchor" href="#pagination"&gt;&lt;/a&gt;Pagination&lt;/h3&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Pagination queries with Spring Data MongoDB and Spring Data JPA now benefit from an &lt;a href="https://github.com/spring-projects/spring-data-commons/blob/17366031071c68ddb87a9de1debac6f1dda85524/src/main/java/org/springframework/data/repository/support/PageableExecutionUtils.java#L46"&gt;improved fetching strategy&lt;/a&gt; that more aggressively tries to avoid executing a count query.
+Constructing a &lt;code&gt;Page&lt;/code&gt; requires the fetched data and usually the total record count returned by the query.
+While data queries can be optimized with range selection and indexes, count queries are quite expensive because they require a scan of the table or an index.
+In case you request the last, only partially-filled page, we can skip counting the records as the toal number of elements can be calculated from the offset and numer of items in the result page.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect2"&gt;
+&lt;h3 id="mongodb-dbref-resolution"&gt;&lt;a class="anchor" href="#mongodb-dbref-resolution"&gt;&lt;/a&gt;MongoDB DBRef resolution&lt;/h3&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Another performance-related change was made in Spring Data MongoDB&amp;#8217;s &lt;code&gt;DBRef&lt;/code&gt; fetching. Collections of references are fetched in a &lt;a href="https://github.com/spring-projects/spring-data-mongodb/blob/b79474c92c231ee4f2b3bd77fdde12878002acef/spring-data-mongodb/src/main/java/org/springframework/data/mongodb/core/convert/MappingMongoConverter.java#L1253"&gt;single bulk-operation&lt;/a&gt; if the references in the collection point to the same database collection. That means, wen can basically read the related collection using a single query instead of one for each element.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="xml-and-json-based-projections-for-rest-payloads"&gt;&lt;a class="anchor" href="#xml-and-json-based-projections-for-rest-payloads"&gt;&lt;/a&gt;XML and JSON based projections for REST payloads&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The &lt;a href="https://spring.io/blog/2014/09/09/spring-data-release-train-evans-goes-ga"&gt;Evans&lt;/a&gt; and &lt;a href="https://spring.io/blog/2016/05/03/what-s-new-in-spring-data-hopper"&gt;Hopper&lt;/a&gt; release trains shipped with projection features that allow customizing the view on existing domain objects by applying projection interfaces.
+Projections can be used in application code (repositories or manually implemented Spring MVC controllers) or with Spring Data REST to expose a dedicated view on a domain object through a web endpoint.
+The projection also could have been used to bind form submissions (see this example for details).
+With Ingalls we now extend that support to handle JSON and XML requests:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@RestController
+class UserController {
+
+  /**
+   * Receiving POST requests supporting both JSON and XML.
+   */
+  @PostMapping(value = "/")
+  HttpEntity&amp;lt;String&amp;gt; post(@RequestBody UserPayload user) {
+
+    return ResponseEntity
+      .ok(String.format("firstname: %s, lastname: %s",
+        user.getFirstname(), user.getLastname()));
+  }
+}
+
+@ProjectedPayload
+public interface UserPayload {
+
+  @XBRead("//firstname")
+  @JsonPath("$..firstname")
+  String getFirstname();
+
+  @XBRead("//lastname")
+  @JsonPath("$..lastname")
+  String getLastname();
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Projection interfaces are annotated with &lt;code&gt;@ProjectedPayload&lt;/code&gt; to enable projection and projection method annotations contain a &lt;a href="https://github.com/jayway/JsonPath#getting-started"&gt;JSON path&lt;/a&gt; or &lt;a href="https://xmlbeam.org/t01.html#E01:_Printing_some_weather_data"&gt;XPath expression&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;If these property annotations are omitted, we are going to assume defaults (i.e. &lt;code&gt;$.firstname&lt;/code&gt; or &lt;code&gt;/firstname&lt;/code&gt; etc. in the example above).
+The fundamental idea here is to&amp;#8201;&amp;#8212;&amp;#8201;instead of using an object structure to map incoming data&amp;#8201;&amp;#8212;&amp;#8201;rather point exactly to the parts of a payload that you are interested in.
+The use of JSON Path expressions or XPath allows you to be more lenient about the actual location of the element you want to access so that a change in the payload structure does not necessarily break the consumer.
+See how the example above looksup &lt;code&gt;firstname&lt;/code&gt; anywhere in the document.
+If the party producing the JSON decided to all of a sudden nest that into e.g. a &lt;code&gt;user&lt;/code&gt; document or XML sub node, nothing would need to change in the consuming code.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;If you want to use that kind of payload access on the client, you can simply register the corresponding &lt;code&gt;HttpMessageConverter&lt;/code&gt; instances on a &lt;code&gt;RestTemplate&lt;/code&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@Configuration
+class Config {
+
+  @Bean
+  RestTemplateBuilder builder() {
+    return new RestTemplateBuilder()
+      .additionalMessageConverters(new ProjectingJackson2HttpMessageConverter())
+      .additionalMessageConverters(new XmlBeamHttpMessageConverter());
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The projection binding support uses &lt;a href="https://github.com/jayway/JsonPath"&gt;JsonPath&lt;/a&gt; to evaluate JSON-path expressions and &lt;a href="https://xmlbeam.org/"&gt;XMLBeam&lt;/a&gt; to evaluate XPath expressions. You can find a complete example for this in in the &lt;a href="https://github.com/spring-projects/spring-data-examples/tree/c523b8d468484075658a2b3c63a4a718c54bab16/web/projection"&gt;Spring Data Examples repository&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="cross-origin-resource-sharing-with-spring-data-rest"&gt;&lt;a class="anchor" href="#cross-origin-resource-sharing-with-spring-data-rest"&gt;&lt;/a&gt;Cross-Origin Resource Sharing with Spring Data REST&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Using client-side JavaScript requests inside of browsers is restricted by the &lt;a href="https://en.wikipedia.org/wiki/Same-origin_policy"&gt;same-origin policy&lt;/a&gt;. Requesting data from other sources than the application server is a forbidden by default because it is a cross-origin request. Enabling Cross-Origin Resource Sharing (CORS) requires the target server to provide &lt;a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing"&gt;CORS headers&lt;/a&gt; to be sent with every HTTP response. The Ingalls release of Spring Data REST now allows you to easily:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@CrossOrigin
+public interface CustomerRepository extends CrudRepository&amp;lt;Customer, Long&amp;gt; {}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-http" data-lang="http"&gt;GET /customers/1 HTTP/1.1
+Origin: http://localhost&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-http" data-lang="http"&gt;HTTP/1.1 200 OK
+Vary: Origin
+ETag: "0"
+Access-Control-Allow-Origin: http://localhost
+Access-Control-Allow-Credentials: true
+Last-Modified: Tue, 24 Jan 2017 09:38:01 GMT
+Content-Type: application/hal+json;charset=UTF-8&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Exported domain classes and repositories can be annotated with &lt;code&gt;@CrossOrigin&lt;/code&gt; to enable CORS and the annotation can be used to customize the setup.
+For more global configuration you can use &lt;code&gt;RepositoryRestConfigurer.configureRepositoryRestConfiguration(…)&lt;/code&gt; to gain full control over the CORS setup across all Spring Data REST exposed resources.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@Component
+public class SpringDataRestCustomization extends
+  RepositoryRestConfigurerAdapter {
+
+  @Override
+  public void configureRepositoryRestConfiguration(
+    RepositoryRestConfiguration config) {
+
+    config.getCorsRegistry().addCorsMapping("/person/**")
+      .allowedOrigins("http://domain2.com")
+      .allowedMethods("PUT", "DELETE")
+      .allowedHeaders("header1", "header2", "header3")
+      .exposedHeaders("header1", "header2")
+      .allowCredentials(false).maxAge(3600);
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Find more details about that in the &lt;a href="http://docs.spring.io/spring-data/rest/docs/current/reference/html/#customizing-sdr.configuring-cors"&gt;reference documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="new-mongodb-aggregation-framework-operators"&gt;&lt;a class="anchor" href="#new-mongodb-aggregation-framework-operators"&gt;&lt;/a&gt;New MongoDB Aggregation Framework operators&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The MongoDB team adds &lt;a href="https://docs.mongodb.com/manual/release-notes/3.4/#aggregation"&gt;new aggregation framework operators&lt;/a&gt; on a regular basis.
+With the Ingalls release train, we took the chance to enhance Spring Data MongoDB&amp;#8217;s set of available operators to align with MongoDB ones and how you interact with these.
+This release adds native support for the following aggregation operators and aggregation stages:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect2"&gt;
+&lt;h3 id="aggregation-operators"&gt;&lt;a class="anchor" href="#aggregation-operators"&gt;&lt;/a&gt;Aggregation operators&lt;/h3&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;$anyElementTrue&lt;/code&gt;, &lt;code&gt;$allElementsTrue&lt;/code&gt;, &lt;code&gt;$setEquals&lt;/code&gt;, &lt;code&gt;$setIntersection&lt;/code&gt;, &lt;code&gt;$setUnion&lt;/code&gt;, &lt;code&gt;$setDifference&lt;/code&gt;, &lt;code&gt;$setIsSubset&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;$filter&lt;/code&gt;, &lt;code&gt;$in&lt;/code&gt;, &lt;code&gt;$indexOfArray&lt;/code&gt;, &lt;code&gt;$range&lt;/code&gt;, &lt;code&gt;$reverseArray&lt;/code&gt;, &lt;code&gt;$reduce&lt;/code&gt;, &lt;code&gt;$zip&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;$indexOfBytes&lt;/code&gt;, &lt;code&gt;$indexOfCP&lt;/code&gt;, &lt;code&gt;$split&lt;/code&gt;, &lt;code&gt;$strLenBytes&lt;/code&gt;, &lt;code&gt;$strLenCP&lt;/code&gt;, &lt;code&gt;$substrCP&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;$stdDevPop&lt;/code&gt;, &lt;code&gt;$stdDevSamp&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;$abs&lt;/code&gt;, &lt;code&gt;$ceil&lt;/code&gt;, &lt;code&gt;$exp&lt;/code&gt;, &lt;code&gt;$floor&lt;/code&gt;, &lt;code&gt;$ln&lt;/code&gt;, &lt;code&gt;$log&lt;/code&gt;, &lt;code&gt;$log10&lt;/code&gt;, &lt;code&gt;$pow&lt;/code&gt;, &lt;code&gt;$sqrt&lt;/code&gt;, &lt;code&gt;$trunc&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;$arrayElementAt&lt;/code&gt;, &lt;code&gt;$concatArrays&lt;/code&gt;, &lt;code&gt;$isArray&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;$literal&lt;/code&gt;, &lt;code&gt;$let&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;$dayOfYear&lt;/code&gt;, &lt;code&gt;$dayOfMonth&lt;/code&gt;, &lt;code&gt;$dayOfWeek&lt;/code&gt;, &lt;code&gt;$year&lt;/code&gt;, &lt;code&gt;$month&lt;/code&gt;, &lt;code&gt;$week&lt;/code&gt;, &lt;code&gt;$hour&lt;/code&gt;, &lt;code&gt;$minute&lt;/code&gt;, &lt;code&gt;$second&lt;/code&gt;, &lt;code&gt;$millisecond&lt;/code&gt;, &lt;code&gt;$dateToString&lt;/code&gt;, &lt;code&gt;$isoDayOfWeek&lt;/code&gt;, &lt;code&gt;$isoWeek&lt;/code&gt;, &lt;code&gt;$isoWeekYear&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;$count&lt;/code&gt;, &lt;code&gt;$cond&lt;/code&gt;, &lt;code&gt;$ifNull&lt;/code&gt;, &lt;code&gt;$map&lt;/code&gt;, &lt;code&gt;$switch&lt;/code&gt;, &lt;code&gt;$type&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect2"&gt;
+&lt;h3 id="aggregation-stages"&gt;&lt;a class="anchor" href="#aggregation-stages"&gt;&lt;/a&gt;Aggregation stages&lt;/h3&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;$facet&lt;/code&gt;, &lt;code&gt;$bucket&lt;/code&gt;, &lt;code&gt;$bucketAuto&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;$replaceRoot&lt;/code&gt;, &lt;code&gt;$unwind&lt;/code&gt;, &lt;code&gt;$graphLookup&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Aggregation operators have entry points for creation and are built in a fluent style.
+Multiple aggregators are grouped in facades like &lt;code&gt;ArrayOperators&lt;/code&gt;, &lt;code&gt;ArithmeticOperators&lt;/code&gt; and many more.
+Field references and aggregation expressions can be used in the entry point methods.
+Entry points to aggregation stage operators are accessible via &lt;code&gt;Aggregation&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;Aggregation.newAggregation(
+  project()
+    .and(ArrayOperators.arrayOf("instock").concat("ordered")).as("items")
+);
+
+Aggregation.newAggregation(
+  project()
+    .and(ArithmeticOperators.valueOf("quizzes").sum()).as("quizTotal")
+);
+
+Aggregation.newAggregation(
+  group().stdDevSamp("age").as("ageStdDev")
+);
+
+Aggregation.newAggregation(Employee.class,
+  match(Criteria.where("name").is("Andrew")),
+  graphLookup("employee")
+    .startWith("reportsTo")
+    .connectFrom("reportsTo")
+    .connectTo("name")
+    .depthField("depth")
+    .maxDepth(5)
+    .as("reportingHierarchy"));
+
+Aggregation.newAggregation(bucketAuto("field", 5)
+  .andOutputExpression("netPrice + tax").as("total")
+);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Any currently unsupported aggregation operators and expressions can be used by implementing &lt;code&gt;AggregationOperation&lt;/code&gt; or &lt;code&gt;AggregationExpression&lt;/code&gt; respectively.
+Please also note that some of these operators were introduced in very recent MongoDB versions and can only be used with those.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The growing number of operators opens up a whole lot new set of possibilities to combine them with each other.
+Operators can be nested in various combinations, which can sometimes lead to code that is hard to read.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;newAggregation(
+  project()
+    .and(ConditionalOperators.when(Criteria.where("a").gte(42))
+      .then("answer")
+      .otherwise("no-answer"))
+      .as("deep-tought")
+);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;To simplify this code we now support Spring Expression Language (SpEL) expressions to formulate the same projection like this:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;newAggregation(
+  project()
+    .andExpression("cond(a &amp;gt;= 42, 'answer', 'no-answer')")
+    .as("deep-tought")
+);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;SpEL support in aggregations is not something entirely new.
+In fact, it has been available since Spring Data MongoDB 1.6.
+So far it supported arithmetic operations (like &lt;code&gt;'$items.price' * '$items.quantity'&lt;/code&gt;).
+The new bit that Ingalls adds here is that now aggregation operators can be expressed as functions that accept parameters.
+You pass fields to aggregation operators by using their field names.
+The aggregation framework then evaluates SpEL expressions and creates the BSON documents for the aggregation operator.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The gateway to SpEL is &lt;code&gt;AggregationSpELExpression.expressionOf(…)&lt;/code&gt; that allows handing in SpEL expressions everywhere you are able to hand in an &lt;code&gt;AggregationExpression&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;newAggregation(
+  group("number")
+    .first(expressionOf("cond(a &amp;gt;= 42, 'answer', 'no-answer')"))
+    .as("deep-tought")
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Refer to the
+&lt;a href="http://docs.spring.io/spring-data/mongodb/docs/current/reference/html/#mongo.aggregation"&gt;reference documentation&lt;/a&gt; or the &lt;a href="https://github.com/spring-projects/spring-data-examples/blob/9a2e95a784cf449bdda372668ae78e8d5c06956d/mongodb/aggregation/src/test/java/example/springdata/mongodb/aggregation/SpringBooksIntegrationTests.java"&gt;MongoDB Aggegation Framework example&lt;/a&gt; for further details.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="redis-geo-indexes"&gt;&lt;a class="anchor" href="#redis-geo-indexes"&gt;&lt;/a&gt;Redis Geo Indexes&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Redis 3.2 supports geo indexing and we received great support from our community regarding geo indexes.
+We ship geo index support with Ingalls that is available through &lt;code&gt;RedisTemplate&lt;/code&gt; and Redis repositories. Let us have a look at an example:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;geoOperations.geoAdd("Sicily", new Point(13.361389, 38.115556), "Arigento");
+geoOperations.geoAdd("Sicily", new Point(15.087269, 37.502669), "Catania");
+geoOperations.geoAdd("Sicily", new Point(13.583333, 37.316667), "Palermo");
+
+GeoResults&amp;lt;GeoLocation&amp;lt;String&amp;gt;&amp;gt; result =
+  geoOperations.geoRadiusByMember("Sicily", "Palermo",
+    new Distance(100, DistanceUnit.KILOMETERS));
+
+List&amp;lt;String&amp;gt; geohashes = geoOperations.geoHash("Sicily", "Arigento", "Catania");
+List&amp;lt;Point&amp;gt; points = geoOperations.geoPos("Sicily", "Arigento", "Palermo");&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Geo indexes integrate seamless with your domain classes.
+Domain objects with geospatial values can be indexed in a Geo index and queried through Redis repositories.
+The following example shows domain class and repository interface declarations:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;public class City {
+
+  @Id String id;
+  String name;
+
+  @GeoIndexed Point location;
+}
+
+public interface CityRepository extends Repository&amp;lt;City, String&amp;gt; {
+
+  List&amp;lt;City&amp;gt; findByLocationNear(Point point, Distance distance);
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Declaring a repository query using the &lt;code&gt;Near&lt;/code&gt; or &lt;code&gt;Within&lt;/code&gt; keywords lets you use geospatial queries near a &lt;code&gt;Point&lt;/code&gt; or within a &lt;code&gt;Circle&lt;/code&gt;.
+Note the &lt;code&gt;@GeoIndexed&lt;/code&gt; annotation used on &lt;code&gt;location&lt;/code&gt; allows the usage of a geo-index that can be used with the derived geospatial query method.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="spring-data-for-apache-cassandra"&gt;&lt;a class="anchor" href="#spring-data-for-apache-cassandra"&gt;&lt;/a&gt;Spring Data for Apache Cassandra&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Spring Data for Apache Cassandra is now a core module maintained by the Spring Data team.
+Besides the change in primary ownership of development effort, the Ingalls release train ships with a series of noteworthy changes to the module itself.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;We upgraded to the Datastax Java Driver 3.1 and so Spring Data for Apache Cassandra now supports Apache Cassandra 3.0 (1.2, 2.0, 2.1, 2.2 and 3.0, up to 3.9).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This release also ships with support for query derivation so that you do not necessarily have to use string queries but can derive an Apache Cassandra CQL query from the query method name:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;public interface BasicUserRepository extends Repository&amp;lt;User, Long&amp;gt; {
+
+  /**
+   * Derived query method.
+   * Creates {@code SELECT * FROM users WHERE username = ?0}.
+   */
+  User findUserByUsername(String username);
+
+  /**
+   * Derived query method using SASI (SSTable Attached Secondary Index)
+   * features through the {@code LIKE} keyword.
+   * This query corresponds with
+   * {@code SELECT * FROM users WHERE lastname LIKE '?0'}.
+   * {@link User#lastname} is not part of the
+   * primary key so it requires a secondary index.
+   */
+  List&amp;lt;User&amp;gt; findUsersByLastnameStartsWith(String lastnamePrefix);
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;You can find examples for query derivation for Spring Data for Apache Cassandra in our &lt;a href="https://github.com/spring-projects/spring-data-examples/blob/c523b8d468484075658a2b3c63a4a718c54bab16/cassandra/example/src/main/java/example/springdata/cassandra/basic/BasicUserRepository.java"&gt;examples repository&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Query derivation supports all predicates provided by Apache Cassandra and ships with predicates for SASI (SSTable Attached Secondary Index) indexes. In this context, query derivation is in not opinionated about primary keys or columns with a secondary index. There is no support for &lt;code&gt;AllowFiltering&lt;/code&gt; &lt;a href="https://jira.spring.io/browse/DATACASS-376"&gt;yet&lt;/a&gt;. Also, repository query methods also support &lt;code&gt;Stream&lt;/code&gt; as a return type. Using a &lt;code&gt;Stream&lt;/code&gt; does not preload the whole result set but iterates over the results as you pull on the stream.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;To round things off, you can now use JSR-310 and ThreeTen back-port types as well as JodaTime types in your domain classes that were added as part of the Java 8 support story.
+JSR-310 types are converted to native Apache Cassandra data types. Refer to the revised &lt;a href="http://docs.spring.io/spring-data/cassandra/docs/1.5.0.RELEASE/reference/html/#mapping-conversion"&gt;reference documentation&lt;/a&gt; or our &lt;a href="https://github.com/spring-projects/spring-data-examples/tree/c523b8d468484075658a2b3c63a4a718c54bab16/cassandra/java8"&gt;Java 8 examples&lt;/a&gt; for details.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;public class Order {
+
+  @Id String id;
+  LocalDate orderDate;
+  ZoneId zoneId;
+}
+
+public interface OrderRepository extends Repository&amp;lt;Order, String&amp;gt; {
+
+  /**
+   * Method parameters are converted according the registered
+   * Converters into Cassandra types.
+   */
+  @Query("SELECT * from pizza_orders WHERE orderdate = ?0 and zoneid = ?1 ALLOW FILTERING")
+  Order findOrderByOrderDateAndZoneId(LocalDate orderDate, ZoneId zoneId);
+
+  /**
+   * String-based query using native data types.
+   */
+  @Query("SELECT * from pizza_orders WHERE orderdate = ?0 and zoneid = ?1 ALLOW FILTERING")
+  Order findOrderByDate(com.datastax.driver.core.LocalDate orderDate, String zoneId);
+
+  /**
+   * Streaming query.
+   */
+  Stream&amp;lt;Order&amp;gt; findAll();
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Data type support is configurable by registering custom conversions.
+For details on this, make sure you check out the examples &lt;a href="https://github.com/spring-projects/spring-data-examples/tree/c523b8d468484075658a2b3c63a4a718c54bab16/cassandra/example/src/main/java/example/springdata/cassandra/convert"&gt;dedicated to this on GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;A last noteworthy feature is user-defined types (UDT).
+With Ingalls, you can now either use mapped user-defined types embedded in your domain classes or just use the native &lt;code&gt;UDTValue&lt;/code&gt; type.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@Table
+public class Person {
+
+  @Id int id;
+
+  String firstname, lastname;
+  Address current;
+  List&amp;lt;Address&amp;gt; previous;
+
+  @CassandraType(type = Name.UDT, userTypeName = "address")
+  UDTValue alternative;
+}
+
+@UserDefinedType
+public class Address {
+  String street, zip, city;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Explicitly mapped iser-defined types map structured values to &lt;code&gt;UDTValue&lt;/code&gt; under the coverts so thatyyou can keep working with a domain class while the mapping is handled by Spring Data for Apache Cassandra.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;UDT values are stored in a row which makes mapped UDTs embedded objects.
+You can use UDTs as singular property or as part of a collection type.
+If you are using schema creation, then user-defined types are created in the data store on application startup.
+UDTs are value objects conceptually, which means that updates to UDT values (by saving a domain object) result in replacing the entire value.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;For details on particular features please refer to the revised &lt;a href="http://docs.spring.io/spring-data/cassandra/docs/1.5.0.RELEASE/reference/html/"&gt;reference documentation&lt;/a&gt; or the &lt;a href="https://github.com/spring-projects/spring-data-examples/tree/9a2e95a784cf449bdda372668ae78e8d5c06956d/cassandra/example/src/main/java/example/springdata/cassandra/udt"&gt;UDT example&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="support-for-javaslang"&gt;&lt;a class="anchor" href="#support-for-javaslang"&gt;&lt;/a&gt;Support for Javaslang&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Spring Data repositories now support &lt;a href="http://www.javaslang.io/"&gt;Javaslang&lt;/a&gt;'s &lt;a href="http://static.javadoc.io/io.javaslang/javaslang/2.1.0-alpha/javaslang/control/Option.html"&gt;&lt;code&gt;Option&lt;/code&gt;&lt;/a&gt; and collection types as return values for repository query methods. &lt;code&gt;Option&lt;/code&gt; can be used as an alternative to JDK 8&amp;#8217;s &lt;code&gt;Optional&lt;/code&gt;, &lt;a href="http://static.javadoc.io/io.javaslang/javaslang/2.1.0-alpha/javaslang/collection/Seq.html"&gt;&lt;code&gt;Seq&lt;/code&gt;&lt;/a&gt; can be used as an alternative to JDK&amp;#8217;s &lt;code&gt;List&lt;/code&gt;. Javaslang&amp;#8217;s &lt;code&gt;Set&lt;/code&gt; and &lt;code&gt;Map&lt;/code&gt; are supported, too, and transparently mapped from their JDK counterparts.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;public interface PersonRepository extends Repository&amp;lt;Person, Long&amp;gt; {
+
+    Option&amp;lt;Person&amp;gt; findById(Long id);
+
+    Seq&amp;lt;Person&amp;gt; findByFirstnameContaining(String firstname);
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;For more information see the &lt;a href="https://github.com/spring-projects/spring-data-examples/blob/a41f69127caba6f7b96c868336b93968c000f728/jpa/javaslang/src/test/java/example/PersonRepositoryIntegrationTests.java#L49-L73"&gt;JPA with Javaslang example&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="spring-data-ldap"&gt;&lt;a class="anchor" href="#spring-data-ldap"&gt;&lt;/a&gt;Spring Data LDAP&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The Spring LDAP project has shipped support for Spring Data repositories itself for quite a while.
+With Ingalls, we have extracted that support into a Spring Data module, so that changes that we make to our internal SPIs propagate to the LDAP based implementation more quickly.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;If you are an existing Spring LDAP repositories user, you are affected by this change and need to adopt two changes to your project:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="olist arabic"&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;
+&lt;p&gt;Add &lt;a href="http://projects.spring.io/spring-data-ldap/#quick-start"&gt;&lt;code&gt;Spring Data LDAP&lt;/code&gt;&lt;/a&gt; to your project dependencies.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Change the packages to the repository components from &lt;code&gt;org.springframework.ldap.repository&lt;/code&gt; to &lt;code&gt;org.springframework.data.ldap.repository&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;That said, Spring LDAP 2.3.0 already removed its repository support and if you follow the steps above you can continue using LDAP repositories with Spring Data LDAP 1.0. Learn more about  LDAP repositories by taking a look at our &lt;a href="https://github.com/spring-projects/spring-data-examples/tree/9a2e95a784cf449bdda372668ae78e8d5c06956d/ldap/example"&gt;Spring Data LDAP example&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="conclusion"&gt;&lt;a class="anchor" href="#conclusion"&gt;&lt;/a&gt;Conclusion&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;I hope I could give you a quick overview about the new features of the Ingalls release train. We&amp;#8217;re looking forward to your feedback via our &lt;a href="https://gitter.im/spring-projects/spring-data"&gt;Gitter channel&lt;/a&gt;. Also, please go ahead and report any bugs you spot in our &lt;a href="https://jira.spring.io"&gt;JIRA&lt;/a&gt;. Happy coding!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne Platform 2016 Replay: Migrating from Spring XD to Spring Data Cloud Flow</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/01/30/springone-platform-2016-replay-migrating-from-spring-xd-to-spring-data-cloud-flow" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2017-01-30:2821</id>
+    <updated>2017-01-30T12:45:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne Platform 2016.&lt;br/&gt;Speakers: Katie Mooney; Director, Marketing Operations, zData; Cahlen Humphreys; Big Data Solutions Architect, zData &amp;amp; Dillon Woods; Chief Technology Officer, zData&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/lessons-learned-migrating-from-spring-xd-to-spring-data-cloud-flow-katie-mooney-dillon-woods-cahlen-humphreys"&gt;http://www.slideshare.net/SpringCentral/lessons-learned-migrating-from-spring-xd-to-spring-data-cloud-flow-katie-mooney-dillon-woods-cahlen-humphreys&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The goal of this session is to teach companies how they can use real-time data to make predictions with Spring Cloud Data Flow, Spark 2.0 and Spark ML. It will cover how to train your model using Spark ML in Spark 2.0. Once trained we will show you how to make real-time predictions using the model and Spring Cloud Data Flow.&lt;/p&gt;
+&lt;p&gt;In this session we will point out key differences in Spring XD that have been resolved in Spring Cloud Data Flow. We will highlight why we feel that Spring Cloud Data Flow has a much more promising future with it&amp;rsquo;s real time analytics dashboard written in Spring. This session will also highlight Cloud Foundry and how it is used to quickly deploy and integrate new stream features.&lt;/p&gt;
+&lt;p&gt;What we cover:&lt;br/&gt;-Best practices for streaming data&lt;br/&gt;-Bus services for data point transport&lt;br/&gt;-Stream scaling and development&lt;br/&gt;-Feature cleansing, normalization, and transformation techniques&lt;br/&gt;-Training and Validating models in Spark and Spark ML&lt;br/&gt;-Monitoring your streaming applications in Cloud Foundry&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/rf_kbtaLU4o" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne Platform 2016 Replay: Reactive Kafka</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/01/30/springone-platform-2016-replay-reactive-kafka" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2017-01-30:2820</id>
+    <updated>2017-01-30T12:42:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne Platform 2016.&lt;br/&gt;Speaker: Rajini Sivaram&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/reactive-kafka"&gt;http://www.slideshare.net/SpringCentral/reactive-kafka&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Apache Kafka is a distributed, scalable, high-throughput messaging bus. Over the last few years, Kafka has emerged as a key building block for data-intensive distributed applications. As a high performance message bus, Kafka enables the development of distributed applications using the microservices architecture.&lt;/p&gt;
+&lt;p&gt;Reactive Streams simplifies the development of asynchronous systems using non-blocking back pressure. The reactive framework enables the development of asynchronous microservices by providing a side-effect free functional API with minimal overhead that supports low latency, non-blocking end-to-end data flows.&lt;/p&gt;
+&lt;p&gt;After an introduction to Kafka and reactive streams, we will explore the development of a reactive streams interface for Kafka and the use of this interface for building robust applications using the microservices architecture.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/-ioxYn9Vlao" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne Platform 2016 Replay:  Task Madness - Modern on demand processing</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/01/30/springone-platform-2016-replay-task-madness-modern-on-demand-processing" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2017-01-30:2819</id>
+    <updated>2017-01-30T12:34:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne Platform 2016.&lt;br/&gt;Speakers: Michael Minella,Glenn Renfro&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/task-madness-modern-on-demand-processing"&gt;http://www.slideshare.net/SpringCentral/task-madness-modern-on-demand-processing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The flexibility promised by cloud computing is something that hasn&amp;rsquo;t been fully available in many use cases yet. Most application models are still based on long running containers, robbing users of that very flexibility. Spring Cloud Task, a new project in the Spring portfolio provides both functional and non-functional capabilities for building short lived, cloud-native, microservices. This talk will introduce the project as well as look at example applications. Since we&amp;rsquo;re in Vegas, we&amp;rsquo;re going to put that on demand processing to good use by demonstrating how we used it to generate a March Madness NCAA Men&amp;rsquo;s Basketball Tournament bracket. We&amp;rsquo;ll review how it worked, why Spring Cloud Task was the best fit for this type of application, and how we did this past March!&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/golp4gH7MsI" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne Platform 2016 Replay: Secure &amp; Dynamic App Config at GapTech with Spring Cloud, Vault and Consul</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/01/30/springone-platform-2016-replay-secure-dynamic-app-config-at-gaptech-with-spring-cloud-vault-and-consul" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2017-01-30:2818</id>
+    <updated>2017-01-30T12:29:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne Platform 2016.&lt;br/&gt;Speaker: Nivesh Gopathi, Gap Tech&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/secure-dynamic-app-config-at-gaptech"&gt;http://www.slideshare.net/SpringCentral/secure-dynamic-app-config-at-gaptech&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;As organizations move to audit trails over managed processes, continuous delivery with aggressive MTTR, security first doctrines and ephemeral instances, a key enabler is a platform ability for dynamic application configuration and securely bootstrapping application secrets. In this session, we will go over what the use cases for dynamic configuration and application secrets management are with some high level requirements, how we are collaboratively solving for these at enterprise scale using Spring Cloud Config, Vault and Consul and what’s coming next.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/edKASC0zXzw" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
   <entry>
     <title>Spring Boot 1.4.4 Available Now</title>
     <link rel="alternate" href="https://spring.io/blog/2017/01/26/spring-boot-1-4-4-available-now" />
@@ -286,267 +1031,5 @@
     <content type="html">&lt;p&gt;Recorded at SpringOne Platform 2016.&lt;br/&gt;Speaker: Agim Emruli&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/spring-cloud-on-aws"&gt;http://www.slideshare.net/SpringCentral/spring-cloud-on-aws&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Spring Cloud allows to implement cloud native application across different cloud platforms. Spring Cloud has also a dedicated support for running applications on the Amazon Web Service platform. This talk will introduce common patterns and best-practices to run the application the AWS cloud and how to use the platform provided services efficiently.&lt;/p&gt;
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Qq3CTHRLEwc" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>SpringOne Platform 2016 Replay: Developing microservices with aggregates</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/01/23/springone-platform-2016-replay-developing-microservices-with-aggregates" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2017-01-24:2797</id>
-    <updated>2017-01-23T22:33:00Z</updated>
-    <content type="html">&lt;p&gt;Recorded at SpringOne Platform 2016.&lt;br/&gt;Speaker: Chris Richardson&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/developing-microservices-with-aggregates"&gt;http://www.slideshare.net/SpringCentral/developing-microservices-with-aggregates&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The Domain Model pattern is a great way to develop complex business logic.&lt;br/&gt;Unfortunately, a typical domain model is a tangled, birds nest of classes.&lt;br/&gt;It can’t be decomposed into microservices.&lt;br/&gt;Moreover, business logic often relies on ACID transactions to maintain consistency.&lt;br/&gt;Fortunately, there is a solution to this problem: aggregates.&lt;br/&gt;An aggregate is an often overlooked modeling concept from the must read book Domain Driven Design.&lt;br/&gt;In this talk you will learn how aggregates enable you to develop business logic for the modern world of microservices and NoSQL.&lt;/p&gt;
-&lt;p&gt;We will describe how to use aggregates to design modular business logic that can be partitioned into microservices. You will learn how aggregates enable you to use eventual consistency instead of ACID.&lt;/p&gt;
-&lt;p&gt;We will describe the design of a microservice that is built using aggregates, and Spring Cloud.&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/7kX3fs0pWwc" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>SpringOne Platform 2016 Replay: Spring Boot at PayPal</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/01/23/springone-platform-2016-replay-spring-boot-at-paypal" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2017-01-17:2786</id>
-    <updated>2017-01-23T22:32:00Z</updated>
-    <content type="html">&lt;p&gt;Recorded at SpringOne Platform 2016.&lt;br/&gt;Speakers: Fabio Carvalho, Eduardo Solis&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/spring-boot-paypal"&gt;http://www.slideshare.net/SpringCentral/spring-boot-paypal&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Although PayPal has been using Spring in production for many years, as part of a goal to move towards micro-services, PayPal recently introduced Spring Boot to its Java framework (known as “Raptor”), which includes RESTful services, Batch and Message Daemon applications. Besides Spring Boot, other Spring projects are used, such as Spring framework, Spring Batch and Spring Integration.&lt;/p&gt;
-&lt;p&gt;PayPal Java RESTful framework provides a microservices architecture and deployment model, relying on a PaaS infrastructure on the cloud, CI, Docker, embedded container and Spring Boot. Additionally, many Spring Boot starters, and Spring based features, were developed to achieve PayPal needs.&lt;/p&gt;
-&lt;p&gt;A few examples are:&lt;/p&gt;
-&lt;p&gt;A REST client abstraction and DI mechanism&lt;br/&gt;Central application logging (abstracting URIs and supporting sub-resources when logging traffic to RESTful endpoints)&lt;br/&gt;Application logging to asynchronous activity in Spring Integration channels (for messaging applications)&lt;br/&gt;A few Spring Boot starters for automatic initialization and configuration of “opinionated” PayPal components&lt;br/&gt;RESTEasy Spring Boot starter&lt;br/&gt;Regarding REST services, RESTEasy is the JAX-RS choice for PayPal. Although there is one Spring Boot starter for Jersey, and one for Spring REST, there was none for RESTEasy. Because of that PayPal also created, and open sourced, a RESTEasy Spring Boot starter.&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/U1Wx3PDxWhk" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Integration Extension for Hazelcast 1.0.0 M2 Available</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/01/23/spring-integration-extension-for-hazelcast-1-0-0-m2-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Artem Bilan</name>
-    </author>
-    <id>tag:spring.io,2017-01-23:2794</id>
-    <updated>2017-01-23T22:30:00Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;On behalf of the Spring Integration community I’d like to announce the second Milestone of Spring Integration Extension for &lt;a href="https://hazelcast.com/"&gt;Hazelcast&lt;/a&gt; and its artifact is &lt;code&gt;spring-integration-hazelcast.1.0.0.M2&lt;/code&gt;, which is available in the &lt;a href="https://repo.spring.io/milestone/"&gt;Milestone Repository&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The project has been around for some time and there has not been so much activity since the previous &lt;a href="https://spring.io/blog/2015/04/20/spring-integration-hazelcast-support-1-0-milestone-1-is-available"&gt;Milestone 1&lt;/a&gt; and it only recently gained enough community traction to warrant a release.
-So, first of all, big thanks to you, the community, for your contributions!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Some highlights of the features included to this Milestone:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="hazelcast-leader-election"&gt;&lt;a class="anchor" href="#hazelcast-leader-election"&gt;&lt;/a&gt;Hazelcast Leader Election&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;If you need to elect a leader (e.g. for highly available message consumer where only one node should receive messages) you just need to create a LeaderInitiator:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@Bean
-public HazelcastInstance hazelcastInstance() {
-    return Hazelcast.newHazelcastInstance();
-}
-
-@Bean
-public LeaderInitiator initiator() {
-    return new LeaderInitiator(hazelcastInstance());
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Then when a node is elected leader it will send OnGrantedEvent to all application listeners.
-See the &lt;a href="http://docs.spring.io/spring-integration/reference/html/messaging-endpoints-chapter.html#endpoint-roles"&gt;Spring Integration Reference Manual&lt;/a&gt; for more information on how to use those events to control messaging endpoints.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="hazelcast-writing-messagehandler"&gt;&lt;a class="anchor" href="#hazelcast-writing-messagehandler"&gt;&lt;/a&gt;Hazelcast Writing MessageHandler&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The &lt;code&gt;HazelcastCacheWritingMessageHandler&lt;/code&gt; now can resolve &lt;code&gt;DistributedObject&lt;/code&gt; at runtime against incoming &lt;code&gt;Message&lt;/code&gt; via &lt;code&gt;cacheExpression&lt;/code&gt; property.
-Supported types are &lt;code&gt;IMap&lt;/code&gt;, &lt;code&gt;MultiMap&lt;/code&gt;, &lt;code&gt;ITopic&lt;/code&gt;, &lt;code&gt;ISet&lt;/code&gt; or &lt;code&gt;IList&lt;/code&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@Bean
-public IMap&amp;lt;Integer, HazelcastIntegrationTestUser&amp;gt; distMap() {
-    return testHzInstance().getMap("Distributed_Map1");
-}
-
-@Bean
-@ServiceActivator(inputChannel = "distMapChannel")
-public HazelcastCacheWritingMessageHandler hazelcastMessageHandler() {
-    HazelcastCacheWritingMessageHandler handler =
-                   new HazelcastCacheWritingMessageHandler();
-    handler.setDistributedObject(distMap());
-    handler.setKeyExpression(PARSER.parseExpression("payload.id"));
-    handler.setExtractPayload(true);
-    return handler;
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="hazelcast-cluster-monitor-inbound-channel-adapter"&gt;&lt;a class="anchor" href="#hazelcast-cluster-monitor-inbound-channel-adapter"&gt;&lt;/a&gt;Hazelcast Cluster Monitor Inbound Channel Adapter&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The &lt;code&gt;HazelcastClusterMonitorMessageProducer&lt;/code&gt; enables to listen to the modifications performed on cluster.
-This is an event-driven channel adapter and listens to related Membership, Distributed Object, Migration, Lifecycle and Client events:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&amp;lt;int-hazelcast:cm-inbound-channel-adapter
-                 channel="monitorChannel"
-                 hazelcast-instance="instance"
-                 monitor-types="MEMBERSHIP, DISTRIBUTED_OBJECT" /&amp;gt;
-
-&amp;lt;bean id="instance" class="com.hazelcast.core.Hazelcast"
-            factory-method="newHazelcastInstance"&amp;gt;
-    &amp;lt;constructor-arg&amp;gt;
-        &amp;lt;bean class="com.hazelcast.config.Config" /&amp;gt;
-    &amp;lt;/constructor-arg&amp;gt;
-&amp;lt;/bean&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;We would like to hear any feedback from the Community before we go straight forward to the &lt;code&gt;1.0.0.RELEASE&lt;/code&gt;, so, do not hesitate to contact with us via any available communication channel!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-integration-extensions/tree/master/spring-integration-hazelcast"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration-extensions/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-integration"&gt;Help&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-integration"&gt;Chat&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring LDAP 2.3.1 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/01/23/spring-ldap-2-3-1-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Rob Winch</name>
-    </author>
-    <id>tag:spring.io,2017-01-20:2793</id>
-    <updated>2017-01-23T14:53:09Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;On behalf of the community, I&amp;#8217;m pleased to announce the release of Spring LDAP 2.3.1!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;This release brings in a new era for Spring Data compatibility. Integration for Spring LDAP and Spring Data has been moved to &lt;a href="http://projects.spring.io/spring-data-ldap/"&gt;spring-data-ldap&lt;/a&gt; so that it can partake in the Spring Data release train and ensure compatibility with the latest and greatest Spring Data code base.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The release also brings &lt;a href="https://github.com/spring-projects/spring-ldap/pull/425"&gt;read only&lt;/a&gt; attribute support.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="admonitionblock note"&gt;
-&lt;table&gt;
-&lt;tr&gt;
-&lt;td class="icon"&gt;
-&lt;div class="title"&gt;Note&lt;/div&gt;
-&lt;/td&gt;
-&lt;td class="content"&gt;
-We did an immediate release of Spring LDAP 2.3.1 due to an issue with the Spring LDAP 2.3.0 release.
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-ldap/"&gt;Project Site&lt;/a&gt; |
-&lt;a href="http://docs.spring.io/spring-ldap/site/docs/current/reference/htmlsingle/"&gt;Reference&lt;/a&gt;
-| &lt;a href="http://stackoverflow.com/questions/tagged/spring-ldap"&gt;Help&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Stream Brooklyn.SR2 and Chelsea.M1 released</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/01/20/spring-cloud-stream-brooklyn-sr2-and-chelsea-m1-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Marius Bogoevici</name>
-    </author>
-    <id>tag:spring.io,2017-01-20:2792</id>
-    <updated>2017-01-20T20:35:10Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the community, I am happy to announce the release of Spring Cloud Stream Brooklyn.SR2 and Chelsea.M1 release trains. As part of the next installment to Brooklyn release train, Brooklyn.SR2 adds a number of new features and fixes. The next release train Chelsea.M1 builds on top of Spring Boot 1.5 and a contains a core improvement listed below.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-is-new" class="anchor" name="what-is-new"&gt;&lt;/a&gt;What is new?&lt;/h2&gt;
-&lt;p&gt;A few highlights of the improved areas:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Schema Registry Support:&lt;/em&gt; fixed issues related to using the Schema Registry server, in particular support for MySQL and Postgresql;&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Aggregate Applications:&lt;/em&gt; improved support for property propagation via namespaces;&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Reactive support&lt;/em&gt;: Aligns declarative (e.g. reactive) handler support with imperative mode, which makes it easier to seamlessly adopt a functional programming model. In particular, this adds support for the following idiom:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;@StreamListener(Processor.INPUT)&#xD;
-@SendTo(Processor.OUTPUT)&#xD;
-public Flux&amp;lt;String&amp;gt; uppercaseTransformer(Flux&amp;lt;String&amp;gt; input) {&#xD;
-  return input.map(String::toUpperCase);&#xD;
-}   
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Apache Kafka binder and core&lt;/em&gt;: Adding support in core for binder native marshalling unmarshalling, and in the case of Kafka binder, it supports using Serializers/Deserializers directly (including Confluent Schema Registry-based deserializers);&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Core&lt;/em&gt;: The Chelsea.M1 release train introduces internal changes that allow the binding process to operate over entities other than Spring Integration message channels, which is a prerequisite for Kafka Streams (&lt;a href="http://docs.confluent.io/3.0.0/streams/"&gt;KStream&lt;/a&gt;) and native reactive support.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Comprehensive lists of fixes for the release train components can be find for the &lt;a href="https://github.com/spring-cloud/spring-cloud-stream/milestone/16?closed=1"&gt;core&lt;/a&gt;, &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-binder-rabbit/milestone/5?closed=1"&gt;Rabbit MQ binder&lt;/a&gt; and the &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-binder-kafka/milestone/5?closed=1"&gt;Apache Kafka binder&lt;/a&gt;. &lt;/p&gt;&lt;h2&gt;&lt;a href="#what-is-next" class="anchor" name="what-is-next"&gt;&lt;/a&gt;What is next?&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;The addition of JMS binder support (targeted in Chelsea.M2) with an out of the box implementation for ActiveMQ. Additional implementations for Solace and IBM MQ will be available as community contributions, but not released as artifacts, for licensing reasons;&lt;/li&gt;
-  &lt;li&gt;Support for KStream binding as an experimental feature;&lt;/li&gt;
-  &lt;li&gt;Rabbit MQ binder improvements, including support for user infrastructure, priority queues and TTL.&lt;/li&gt;
-&lt;/ul&gt;&lt;h2&gt;&lt;a href="#acknowledgments" class="anchor" name="acknowledgments"&gt;&lt;/a&gt;Acknowledgments&lt;/h2&gt;
-&lt;p&gt;I would like to thank everyone involved for their support. In particular, I would like to extend special thanks to the community members that have contributed to this release by opening issues or providing patches:&lt;br/&gt;* Rajiv Jivan (&lt;a href="https://github.com/rjivan"&gt;@rjivan&lt;/a&gt;)&lt;br/&gt;* Mark Nadelson (&lt;a href="https://github.com/mnadelson"&gt;@mnadelson&lt;/a&gt;)&lt;br/&gt;* Ivo Parun Rua (&lt;a href="https://github.com/parunruaivo"&gt;@parunruaivo&lt;/a&gt;)&lt;br/&gt;* Sanjay Parmar (&lt;a href="https://github.com/parmarsanjay"&gt;@parmarsanjay&lt;/a&gt;)&lt;br/&gt;* Dennis Melzer (&lt;a href="https://github.com/sirwayne"&gt;@sirwayne&lt;/a&gt;)&lt;br/&gt;* Dominik Meister (&lt;a href="https://github.com/neptoon"&gt;@neptoon&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;Also, special thanks to Donovan Muller (&lt;a href="https://github.com/donovanmuller"&gt;@donovanmuller&lt;/a&gt;) for the contributions to the JMS binder, which will be included in the upcoming milestone release.into a later release train.&lt;/p&gt;
-&lt;p&gt;As usual the releases are available as follows:&lt;br/&gt;* Brooklyn.SR2 in the &lt;a href="https://repo.spring.io/libs-release/org/springframework/cloud/spring-cloud-stream-dependencies/Brooklyn.SR2/"&gt;Spring Releases&lt;/a&gt; repository and &lt;a href="https://repo1.maven.org/maven2/org/springframework/cloud/spring-cloud-stream-dependencies/Brooklyn.SR2/"&gt;Maven Central&lt;/a&gt;;&lt;br/&gt;* Chelsea.M1 in the &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/cloud/spring-cloud-stream/1.2.0.M1/"&gt;Spring Milestone&lt;/a&gt; repository.&lt;/p&gt;
-&lt;p&gt;As always, you can stay in touch with us either in &lt;a href="https://github.com/spring-cloud/spring-cloud-stream"&gt;GitHub&lt;/a&gt;, on &lt;a href="http://stackoverflow.com/questions/tagged/spring-cloud-stream"&gt;Stack Overflow&lt;/a&gt;, on &lt;a href="https://gitter.im/spring-cloud/spring-cloud-stream"&gt;Gitter&lt;/a&gt;, or on &lt;a href="https://twitter.com/springcloud"&gt;Twitter&lt;/a&gt; (hashtag #SCStream).&lt;/p&gt;
-&lt;p&gt;This is also a reminder that the CFP for &lt;a href="http://2017.springio.net"&gt;Spring I/O&lt;/a&gt; is open. Spring I/O is the leading European conference focused on the Spring Framework ecosystem, and will take place in Barcelona in May 18-19, 2017. - if you think you have something interesting to say about Spring, submit a proposal! Spring I/O will also start selling tickets soon, so watch the site!&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring AMQP 1.7.0.RELEASE (and 1.6.7) Available</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/01/19/spring-amqp-1-7-0-release-and-1-6-7-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Gary Russell</name>
-    </author>
-    <id>tag:spring.io,2017-01-19:2791</id>
-    <updated>2017-01-19T20:12:48Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;On behalf of the Spring Integration team I’d like to announce that Spring AMQP &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10450&amp;amp;version=15856"&gt;1.7.0.RELEASE&lt;/a&gt; is now available.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;This release is mainly an intermediate version between &lt;code&gt;1.6.x&lt;/code&gt; and &lt;code&gt;2.0&lt;/code&gt; for Spring Boot &lt;code&gt;1.5&lt;/code&gt; and IO Platform &lt;code&gt;Brussels&lt;/code&gt; dependencies compatibility.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;However, there are several improvements and new features to explain here:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Upgrade to Amqp Client 4.0 with appropriate &lt;code&gt;RabbitConnectionFactoryBean&lt;/code&gt; changes&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Upgrade to Log4j 2.7 and required breaking change fix for the &lt;code&gt;log4j2.AmqpAppender&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Upgrade to Spring Retry 1.2 with important &lt;code&gt;StatefulRetryOperationsInterceptor.setUseRawKey(true)&lt;/code&gt; for backward compatibility&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;a new &lt;code&gt;spring-rabbit-junit&lt;/code&gt; artifact is provided with several utilities (like &lt;code&gt;BrokerRunning&lt;/code&gt; &lt;code&gt;@Rule&lt;/code&gt;) which can be useful for testing Spring AMQP applications&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The &lt;code&gt;SimpleMessageListenerContainer&lt;/code&gt; can now be started without queues to listen to at all.
-They can be provided later at runtime via &lt;code&gt;addQueues()&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;a &lt;code&gt;ConnectionNameStrategy&lt;/code&gt; is provided for the &lt;code&gt;ConnectionFactory&lt;/code&gt; to allow to identify application connections in the Broker or other monitoring and tracing tools&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;These were previously announced with the &lt;a href="https://spring.io/blog/2016/12/28/spring-amqp-1-7-rc1-available-now"&gt;release candidate&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;In addition; several bug fixes have been included as well as the addition of a new &lt;code&gt;CorrelationDataPostProcessor&lt;/code&gt; for the &lt;code&gt;RabbitTemplate&lt;/code&gt; to enable creation/update of correlation data for publisher confirms, after message conversion has occurred.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;This feature is also available in the &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10450&amp;amp;version=15854"&gt;1.6.7 Maintenance Release&lt;/a&gt;, which is also available now.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-amqp/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-amqp"&gt;GitHub&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-amqp"&gt;Help&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-amqp/reference/html/"&gt;Documentation&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-amqp"&gt;Chat&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
   </entry>
 </feed>

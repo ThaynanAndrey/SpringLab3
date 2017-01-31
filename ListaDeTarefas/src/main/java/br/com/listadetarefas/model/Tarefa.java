@@ -9,6 +9,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -20,6 +22,7 @@ import org.hibernate.validator.constraints.NotBlank;
 public class Tarefa {
 
 	@Id
+	@Column(name="TAREFA_ID")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
@@ -28,6 +31,10 @@ public class Tarefa {
 	@Column(name="NOME")
 	private String nome;
 
+	@ManyToOne
+    @JoinColumn(name = "LISTA_DE_TAREFA_ID")
+    private ListaDeTarefas listaDeTarefas;
+	
 	@Column(name="DESCRICAO")
 	private String descricao;
 	
@@ -39,8 +46,8 @@ public class Tarefa {
 	
 	@Column(name="realizada")
 	private Boolean realizada;
-
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "tarefa")
+	
+	@OneToMany(mappedBy = "tarefa", cascade = CascadeType.ALL)
     private List<SubTarefa> subtarefas;
 	
 	public Tarefa() {

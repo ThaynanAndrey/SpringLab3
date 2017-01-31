@@ -1,0 +1,38 @@
+package br.com.listadetarefas.service;
+
+import java.util.Collection;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import br.com.listadetarefas.model.ListaDeTarefas;
+import br.com.listadetarefas.model.Tarefa;
+import br.com.listadetarefas.repository.ListaDeTarefasRepository;
+import br.com.listadetarefas.repository.TarefaRepository;
+
+@Service
+public class ListaDeTarefasService {
+
+	
+	@Autowired
+	private ListaDeTarefasRepository listaDeTarefasRepository;
+	
+	public Tarefa salvarNoBanco(ListaDeTarefas listaDetarefas) {
+		
+		return listaDeTarefasRepository.save(listaDetarefas);
+	}
+	
+	public Collection<Tarefa> buscaTarefas() {
+		
+		return this.listaDeTarefasRepository.findAll();
+	}
+	
+	public void excluirTarefa(Tarefa tarefa) {
+		this.listaDeTarefasRepository.delete(tarefa);
+	}
+	
+	public Tarefa buscaPorId(Long id) {
+		
+		return this.listaDeTarefasRepository.findOne(id);
+	}
+}
