@@ -5,7 +5,222 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-01-30T23:59:05Z</updated>
+  <updated>2017-02-01T16:29:38Z</updated>
+  <entry>
+    <title>Spring IO Platform Athens-SR3</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/02/01/spring-io-platform-athens-sr3" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Andy Wilkinson</name>
+    </author>
+    <id>tag:spring.io,2017-02-01:2823</id>
+    <updated>2017-02-01T16:29:38Z</updated>
+    <content type="html">&lt;p&gt;I am pleased to announce that &lt;a href="http://platform.spring.io/platform"&gt;Spring IO Platform&lt;/a&gt; Athens-SR3 is now available from both &lt;a href="http://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3Aio.spring.platform"&gt;Maven Central&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;This maintenance release upgrades the versions of a number of the projects in the Platform:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring AMQP 1.6.7&lt;/li&gt;
+  &lt;li&gt;Spring Boot 1.4.4&lt;/li&gt;
+  &lt;li&gt;Spring Data Hopper SR7&lt;/li&gt;
+  &lt;li&gt;Spring Framework 4.3.6&lt;/li&gt;
+  &lt;li&gt;Spring Integration 4.3.7&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The versions of a number of third-party dependencies have also been updated.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://platform.spring.io/platform"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/platform/docs/Athens-SR3/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Tips: Spring Batch</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/02/01/spring-tips-spring-batch" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2017-01-26:2809</id>
+    <updated>2017-02-01T01:36:00Z</updated>
+    <content type="html">&lt;p&gt;Speaker: &lt;a href="https://www.twitter.com/starbuxman"&gt;Josh Long&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Hi Spring fans! In this tip, we&amp;rsquo;ll look at how to process large amounts of sequential data using Spring Batch.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/x4nBNLoizOc?list=PLgGXSWYM2FpPw8rV0tZoMiJYSCiLhPnOc" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Cloud Dalston M1 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/01/31/spring-cloud-dalston-m1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Spencer Gibb</name>
+    </author>
+    <id>tag:spring.io,2017-01-30:2817</id>
+    <updated>2017-01-31T13:01:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the community, I am pleased to announce that Milestone 1 (M1) of the &lt;a href="https://cloud.spring.io"&gt;Spring Cloud Dalston&lt;/a&gt; Release Train is available today. The release can be found in our &lt;a href="https://repo.spring.io/milestone/"&gt;Spring Milestone&lt;/a&gt; repository. You can check out the Dalston &lt;a href="https://github.com/spring-projects/spring-cloud/wiki/Spring-Cloud-Dalston-Release-Notes"&gt;release notes for more information&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#notable-changes-in-the-dalston-release-train" class="anchor" name="notable-changes-in-the-dalston-release-train"&gt;&lt;/a&gt;Notable Changes in the Dalston Release Train&lt;/h2&gt;
+&lt;p&gt;Spring Cloud Vault Config is a new project that provides client-side support for externalized secret management in a distributed system via &lt;a href="https://www.vaultproject.io/"&gt;Hashicorp Vault&lt;/a&gt;.&lt;/p&gt;&lt;h3&gt;&lt;a href="#config-server" class="anchor" name="config-server"&gt;&lt;/a&gt;Config Server&lt;/h3&gt;
+&lt;p&gt;Hashicorp Vault was previously added as a backend to Config Server to go along with the VCS based backends. Config Server now has support for multiple backends via a Composite pattern. This allows for combinations of backend types that was not possible before, such as: Vault and git or multiple git backends. Authentication to git repositories hosted by AWS Codecommit is now supported.&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-commons" class="anchor" name="spring-cloud-commons"&gt;&lt;/a&gt;Spring Cloud Commons&lt;/h3&gt;
+&lt;p&gt;Since the beginning of these Spring Cloud Core modules (Commons, Config, Netflix, Bus), implementations of &lt;code&gt;DiscoveryClient&lt;/code&gt; have automatically registered the running client with the discovery server. This was a side effect of the initial Netflix Eureka implementation. Now service registration and discovery of registered services are separate concerns. There is now a &lt;code&gt;ServiceRegistry&lt;/code&gt; interface that Spring Cloud Netflix, Consul and Zookeeper all implement. By default, the client is still auto-registered, but this can be disabled via the &lt;code&gt;autoRegister&lt;/code&gt; attribute of &lt;code&gt;@EnableDiscoveryClient&lt;/code&gt; or dynamically via a property. This also allows multiple services per JVM to be registered programatically. Look for a future blog post for further details.&lt;/p&gt;
+&lt;p&gt;Support for &lt;code&gt;@LoadBalanced&lt;/code&gt; &lt;code&gt;AsyncRestTemplate&lt;/code&gt; was contributed by the community.&lt;/p&gt;&lt;h3&gt;&lt;a href="#sleuth" class="anchor" name="sleuth"&gt;&lt;/a&gt;Sleuth&lt;/h3&gt;
+&lt;p&gt;Support for a general-purpose context propagation system has been added to Sleuth. It is called baggage and allows for arbitray attributes to be passed through boundaries, such as HTTP or messaging, using Sleuth&amp;rsquo;s already built instrumentation.&lt;/p&gt;&lt;h3&gt;&lt;a href="#contract" class="anchor" name="contract"&gt;&lt;/a&gt;Contract&lt;/h3&gt;
+&lt;p&gt;Contract was enhanced to support more flexibility for contract inputs and outputs. Pact support was added for reading contracts as opposed to the Groovy DSL. Contract was made more pluggable allowing custom DSL formats, Test &amp;amp; Stub generation, and Stub Runner implementations.&lt;/p&gt;&lt;h3&gt;&lt;a href="#consul" class="anchor" name="consul"&gt;&lt;/a&gt;Consul&lt;/h3&gt;
+&lt;p&gt;Besides support for the new &lt;code&gt;ServiceRegistry&lt;/code&gt; API, Spring Cloud Consul supports the Consul feature to deregister zombie services (ie services that fail health checks for a configurable amount of time will be removed from Consul).&lt;/p&gt;&lt;h3&gt;&lt;a href="#other" class="anchor" name="other"&gt;&lt;/a&gt;Other&lt;/h3&gt;
+&lt;p&gt;Dalston is based on Spring Boot 1.5.x and that is the minimum required version. Other changes include upgrades to various libraries, bug fixes, documentation, and polishing. Many thanks to all the community contributions of pull requests and issues.&lt;/p&gt;
+&lt;p&gt;The following modules were updated as part of Dalston.M1:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Module &lt;/th&gt;
+      &lt;th&gt;Version &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud AWS &lt;/td&gt;
+      &lt;td&gt;1.2.0.M1 &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Build &lt;/td&gt;
+      &lt;td&gt;1.3.1.M1 &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Bus &lt;/td&gt;
+      &lt;td&gt;1.3.0.M1 &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Cloudfoundry &lt;/td&gt;
+      &lt;td&gt;1.1.0.M1 &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Commons &lt;/td&gt;
+      &lt;td&gt;1.2.0.M1 &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Config &lt;/td&gt;
+      &lt;td&gt;1.3.0.M2 &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Consul &lt;/td&gt;
+      &lt;td&gt;1.2.0.M1 &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Contract &lt;/td&gt;
+      &lt;td&gt;1.1.0.M1 &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Netflix &lt;/td&gt;
+      &lt;td&gt;1.3.0.M1 &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Security &lt;/td&gt;
+      &lt;td&gt;1.2.0.M1 &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Sleuth &lt;/td&gt;
+      &lt;td&gt;1.2.0.M1 &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Stream &lt;/td&gt;
+      &lt;td&gt;Chelsea.M1 &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Task &lt;/td&gt;
+      &lt;td&gt;1.1.2.RELEASE &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Vault Config &lt;/td&gt;
+      &lt;td&gt;1.0.0.M2 &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Zookeeper &lt;/td&gt;
+      &lt;td&gt;1.1.0.M1 &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;NOTE: Spring Cloud CLI 1.2.0.M1 will be released later.&lt;/p&gt;
+&lt;p&gt;And, as always, we welcome feedback: either on &lt;a href="https://github.com/spring-cloud/"&gt;GitHub&lt;/a&gt;, on &lt;a href="https://gitter.im/spring-cloud/spring-cloud"&gt;Gitter&lt;/a&gt;, on &lt;a href="http://stackoverflow.com/questions/tagged/spring-cloud"&gt;Stack Overflow&lt;/a&gt;, or on &lt;a href="https://twitter.com/SpringCloud"&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To get started with Maven with a BOM (dependency management only)&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;&amp;lt;repositories&amp;gt;&#xD;
+    &amp;lt;repository&amp;gt;&#xD;
+        &amp;lt;id&amp;gt;spring-milestones&amp;lt;/id&amp;gt;&#xD;
+        &amp;lt;name&amp;gt;Spring Milestones&amp;lt;/name&amp;gt;&#xD;
+        &amp;lt;url&amp;gt;http://repo.spring.io/milestone&amp;lt;/url&amp;gt;&#xD;
+        &amp;lt;snapshots&amp;gt;&#xD;
+            &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt;&#xD;
+        &amp;lt;/snapshots&amp;gt;&#xD;
+    &amp;lt;/repository&amp;gt;&#xD;
+&amp;lt;/repositories&amp;gt;&#xD;
+&amp;lt;dependencyManagement&amp;gt;&#xD;
+  &amp;lt;dependencies&amp;gt;&#xD;
+    &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+    &amp;lt;artifactId&amp;gt;spring-cloud-dependencies&amp;lt;/artifactId&amp;gt;&#xD;
+    &amp;lt;version&amp;gt;Dalston.M1&amp;lt;/version&amp;gt;&#xD;
+    &amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt;&#xD;
+    &amp;lt;scope&amp;gt;import&amp;lt;/scope&amp;gt;&#xD;
+  &amp;lt;/dependencies&amp;gt;&#xD;
+&amp;lt;/dependencyManagement&amp;gt;&#xD;
+&amp;lt;dependencies&amp;gt;&#xD;
+  &amp;lt;dependency&amp;gt;&#xD;
+    &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+    &amp;lt;artifactId&amp;gt;spring-cloud-starter-config&amp;lt;/artifactId&amp;gt;&#xD;
+  &amp;lt;/dependency&amp;gt;&#xD;
+  &amp;lt;dependency&amp;gt;&#xD;
+    &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+    &amp;lt;artifactId&amp;gt;spring-cloud-starter-eureka&amp;lt;/artifactId&amp;gt;&#xD;
+  &amp;lt;/dependency&amp;gt;&#xD;
+  ...&#xD;
+&amp;lt;/dependencies&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or with Gradle:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;buildscript {&#xD;
+  dependencies {&#xD;
+    classpath &amp;quot;io.spring.gradle:dependency-management-plugin:1.0.0.RELEASE&amp;quot;&#xD;
+  }&#xD;
+}&#xD;
+repositories {&#xD;
+    maven {&#xD;
+        url &amp;#39;http://repo.spring.io/milestone&amp;#39;&#xD;
+    }&#xD;
+}&#xD;
+apply plugin: &amp;quot;io.spring.dependency-management&amp;quot;&#xD;
+&#xD;
+dependencyManagement {&#xD;
+  imports {&#xD;
+    mavenBom &amp;#39;org.springframework.cloud:spring-cloud-dependencies:Dalston.M1&amp;#39;&#xD;
+  }&#xD;
+}&#xD;
+&#xD;
+dependencies {&#xD;
+    compile &amp;#39;org.springframework.cloud:spring-cloud-starter-config&amp;#39;&#xD;
+    compile &amp;#39;org.springframework.cloud:spring-cloud-starter-eureka&amp;#39;&#xD;
+    ...&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - January 31st, 2017</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/01/31/this-week-in-spring-january-31st-2017" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2017-01-31:2822</id>
+    <updated>2017-01-31T10:44:29Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! It&amp;rsquo;s been a very busy week and we&amp;rsquo;ve got a lot to cover so let&amp;rsquo;s get to it! &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;first, the &lt;em&gt;big&lt;/em&gt; news: &lt;a href="http://spring.io/blog/2017/01/30/spring-boot-1-5-1-released"&gt;Spring Boot 1.5 has just been released!&lt;/a&gt; The new release improves the integration with Cloud Foundry, features Spring Data Ingalls support, LDAP support, a loggers endpoint, and Apache Kafka auto-configuration support. &lt;a href="http://start.spring.io"&gt;Get started with Spring Boot now&lt;/a&gt;!&lt;/li&gt;
+  &lt;li&gt;Spring Data guru March Paluch put together a nice look at &lt;a href="http://spring.io/blog/2017/01/30/what-s-new-in-spring-data-release-ingalls"&gt;Spring Data Ingalls&lt;/a&gt;. The new release is packed with lots of great features including a 20-70% performance improvement, event publication for aggregate roots, improved pagination and &lt;em&gt;so&lt;/em&gt; much more! Read the post!&lt;/li&gt;
+  &lt;li&gt;Spring Data lead Oliver Gierke just announced Spring Data Ingalls has gone GA! Hurray! &lt;a href="http://spring.io/blog/2017/01/26/spring-data-release-train-ingalls-goes-ga"&gt;See the release post for more&lt;/a&gt;!&lt;/li&gt;
+  &lt;li&gt;This is a cool SpringOne Platform talk on migrating Spring XD-based &lt;a href="http://spring.io/blog/2017/01/30/springone-platform-2016-replay-migrating-from-spring-xd-to-spring-data-cloud-flow"&gt;applications to Spring Cloud Data Flow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Rajini Sivaram&amp;rsquo;s SpringOne Platform talk on &lt;a href="http://spring.io/blog/2017/01/30/springone-platform-2016-replay-reactive-kafka"&gt;Apache Kafka is a good primer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Nivesh Gopathi gave a nice talk on secure, &lt;a href="http://spring.io/blog/2017/01/30/springone-platform-2016-replay-secure-dynamic-app-config-at-gaptech-with-spring-cloud-vault-and-consul"&gt;dynamic configuration with Spring Cloud Vault&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Boot guru Stephane Nicoll just &lt;a href="http://spring.io/blog/2017/01/26/spring-boot-1-4-4-available-now"&gt;announced Spring Boot 1.4.4&lt;/a&gt; which includes a slew of updates and fixes.&lt;/li&gt;
+  &lt;li&gt;Spring Data lead Oliver Gierke &lt;a href="http://spring.io/blog/2017/01/26/spring-data-release-train-hopper-sr7-released"&gt;just announced Spring Data Hopper SR7&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;last week I put together a &lt;a href="http://spring.io/blog/2017/01/26/spring-tips-couchbase"&gt;Spring Tip on Spring Data Couchbase&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;going to be at Devoxx US? &lt;a href="http://spring.io/blog/2017/01/25/spring-team-at-devoxx-us-2017"&gt;We on the Spring team will be too&lt;/a&gt;! Join us!&lt;/li&gt;
+  &lt;li&gt;Spring Integration lead &lt;a href="http://spring.io/blog/2017/01/25/spring-integration-4-3-7-is-available"&gt;Gary Russell just announced Spring Integration 4.3.7&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Boot lead Stephane Nicoll just announced &lt;a href="http://spring.io/blog/2017/01/25/spring-framework-4-3-6-available-now"&gt;Spring Framework 4.3.6, which is a packed maintenance release&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring I/O Platform lead &lt;a href="http://spring.io/blog/2017/01/24/dependency-management-plugin-1-0-0-release"&gt;Andy Wilkinson just announced 1.0 of the Dependency Management Plugin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Google Developer Advocate Ray Tsang just put together a nice post on &lt;a href="https://medium.com/google-cloud/distributed-tracing-spring-boot-microservices-with-stackdriver-trace-7fe42c6de3f3#.hlaikdzdo"&gt;Spring Boot-based tracing with Google Stackdriver&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;speaking of distributed tracing, the Baeldung has a great &lt;a href="http://www.baeldung.com/spring-cloud-sleuth-single-application"&gt;post on distributed tracing with Spring Cloud Sleuth&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Pivotal&amp;rsquo;s own Fred Melo has a great post &lt;a href="https://content.pivotal.io/blog/messaging-patterns-for-event-driven-microservices"&gt;on messaging-patterns for event-driven microservices&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;the Stark and Wayne blog has a nice post that &lt;a href="http://www.starkandwayne.com/blog/demystifying-cloud-foundrys-diego/"&gt;demystifies the Cloud Foundry Diego scheduler&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Oliver Wolf put together a nice post describing some of the &lt;a href="https://specify.io/systems/cloudfoundry/features-and-usecases"&gt;key features of a cloud platform like Cloud Foundry&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;this isn&amp;rsquo;t strictly Spring related, but I thought it interesting: &lt;a href="https://dzone.com/articles/jdk-9-is-the-end-of-the-road-for-some-features"&gt;Java 9 is the end of the road for some features&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>Spring Boot 1.5.1 released</title>
     <link rel="alternate" href="https://spring.io/blog/2017/01/30/spring-boot-1-5-1-released" />
@@ -14,9 +229,9 @@
       <name>Andy Wilkinson</name>
     </author>
     <id>tag:spring.io,2017-01-26:2815</id>
-    <updated>2017-01-30T23:59:05Z</updated>
-    <content type="html">&lt;p&gt;One behalf of the Spring Boot team, and everyone that has contributed, I am pleased to announce that Spring Boot 1.5.1 has been released and is available now from &lt;a href="http://repo.spring.io/release/"&gt;repo.spring.io&lt;/a&gt;, &lt;a href="http://search.maven.org/#search|ga|1|g%3A%22org.springframework.boot%22"&gt;Maven Central&lt;/a&gt; and &lt;a href="https://bintray.com/bintray/jcenter/org.springframework.boot%3Aspring-boot/view"&gt;Bintray&lt;/a&gt;. This release adds a significant number of new features and improvements. For full &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-1.5-Release-Notes#upgrading-from-spring-boot-14"&gt;upgrade instructions&lt;/a&gt; and &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-1.5-Release-Notes#new-and-noteworthy"&gt;&amp;ldquo;new and noteworthy&amp;rdquo;&lt;/a&gt; features please see the &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-1.5-Release-Notes"&gt;release notes&lt;/a&gt;.&lt;/p&gt;&lt;h1&gt;&lt;a href="#what-rsquo-s-new-in-1-5" class="anchor" name="what-rsquo-s-new-in-1-5"&gt;&lt;/a&gt;What&amp;rsquo;s new in 1.5&lt;/h1&gt;&lt;h2&gt;&lt;a href="#apache-kafka-support" class="anchor" name="apache-kafka-support"&gt;&lt;/a&gt;Apache Kafka Support&lt;/h2&gt;
-&lt;p&gt;Spring Boot 1.5 include auto-configuration support for Apache Kafka via the spring-kafka project. To use Kafka simple include the &lt;code&gt;spring-kafka&lt;/code&gt; depenency and configure the appropriate &lt;code&gt;spring.kafka.*&lt;/code&gt; application properties.&lt;/p&gt;&lt;h2&gt;&lt;a href="#cloud-foundry-actuator-extensions" class="anchor" name="cloud-foundry-actuator-extensions"&gt;&lt;/a&gt;Cloud Foundry actuator extensions&lt;/h2&gt;
+    <updated>2017-01-30T23:59:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the Spring Boot team, and everyone that has contributed, I am pleased to announce that Spring Boot 1.5.1 has been released and is available now from &lt;a href="http://repo.spring.io/release/"&gt;repo.spring.io&lt;/a&gt;, &lt;a href="http://search.maven.org/#search|ga|1|g%3A%22org.springframework.boot%22"&gt;Maven Central&lt;/a&gt; and &lt;a href="https://bintray.com/bintray/jcenter/org.springframework.boot%3Aspring-boot/view"&gt;Bintray&lt;/a&gt;. This release adds a significant number of new features and improvements. For full &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-1.5-Release-Notes#upgrading-from-spring-boot-14"&gt;upgrade instructions&lt;/a&gt; and &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-1.5-Release-Notes#new-and-noteworthy"&gt;&amp;ldquo;new and noteworthy&amp;rdquo;&lt;/a&gt; features please see the &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-1.5-Release-Notes"&gt;release notes&lt;/a&gt;.&lt;/p&gt;&lt;h1&gt;&lt;a href="#what-rsquo-s-new-in-1-5" class="anchor" name="what-rsquo-s-new-in-1-5"&gt;&lt;/a&gt;What&amp;rsquo;s new in 1.5&lt;/h1&gt;&lt;h2&gt;&lt;a href="#apache-kafka-support" class="anchor" name="apache-kafka-support"&gt;&lt;/a&gt;Apache Kafka Support&lt;/h2&gt;
+&lt;p&gt;Spring Boot 1.5 includes auto-configuration support for Apache Kafka via the spring-kafka project. To use Kafka simple include the &lt;code&gt;spring-kafka&lt;/code&gt; dependency and configure the appropriate &lt;code&gt;spring.kafka.*&lt;/code&gt; application properties.&lt;/p&gt;&lt;h2&gt;&lt;a href="#cloud-foundry-actuator-extensions" class="anchor" name="cloud-foundry-actuator-extensions"&gt;&lt;/a&gt;Cloud Foundry actuator extensions&lt;/h2&gt;
 &lt;p&gt;Spring Boot’s actuator module now includes additional support that is activated when you deploy to a compatible Cloud Foundry instance. The &lt;code&gt;/cloudfoundryapplication&lt;/code&gt; path provides an alternative secured route to all &lt;code&gt;NamedMvcEndpoint&lt;/code&gt; beans.&lt;/p&gt;
 &lt;p&gt;Cloud Foundry management UIs can make use of the endpoint to display additional actuator information. For example, Pivotal Cloud Foundry shows health information next to the application status. Please see &lt;a href="https://content.pivotal.io/blog/pivotal-cloud-foundry-1-9-sets-the-bar-on-massive-scale"&gt;this blog post&lt;/a&gt; about Pivotal Cloud Foundry 1.9 for further details.&lt;/p&gt;&lt;h2&gt;&lt;a href="#spring-data-ingalls" class="anchor" name="spring-data-ingalls"&gt;&lt;/a&gt;Spring Data Ingalls&lt;/h2&gt;
 &lt;p&gt;Spring Boot 1.5 ships with the recently announced Spring Data Ingalls. Please refer to the &lt;a href="https://spring.io/blog/2017/01/26/spring-data-release-train-ingalls-goes-ga"&gt;announcement blog post&lt;/a&gt; to learn about all its new features.&lt;/p&gt;&lt;h2&gt;&lt;a href="#ldap-support" class="anchor" name="ldap-support"&gt;&lt;/a&gt;LDAP support&lt;/h2&gt;
@@ -972,64 +1187,5 @@ With Ingalls, we have extracted that support into a Spring Data module, so that 
     <content type="html">&lt;p&gt;Recorded at SpringOne Platform 2016.&lt;br/&gt;Speaker: Tomas Lin, Netflix&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/putting-a-spel-on-spinnaker-evolving-an-expression-language-for-continuous-delivery-at-netflix"&gt;http://www.slideshare.net/SpringCentral/putting-a-spel-on-spinnaker-evolving-an-expression-language-for-continuous-delivery-at-netflix&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Spinnaker is an open source, multi-cloud continuous delivery platform. It is used by over 90% of cloud deployments at Netflix. The Spring Expression Language (SpEL) is heavily leveraged to fully articulate and extend Spinnaker’s automated deployment pipelines. SpEL is used heavily to interact with pipeline stages and triggers for variable substitution, information retrieval and conditional evaluation. This session will walk through the evolution of Spinnaker’s use of SpEL over two years of active development. We will share the code, features and wisdom gained from helping the Netflix and open source community adopt SpEL. You should attend if you are interested in the Spinnaker platform and the continuous delivery pipelines feature, or wish to learn how to fully harness SpEL for your own tools.&lt;/p&gt;
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/EnMLzRyU3Iw" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>SpringOne Platform 2016 Replay: Implementing Config Server and extending it</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/01/23/springone-platform-2016-replay-implementing-config-server-and-extending-it" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2017-01-24:2801</id>
-    <updated>2017-01-23T22:38:00Z</updated>
-    <content type="html">&lt;p&gt;Recorded at SpringOne Platform 2016.&lt;br/&gt;Speaker: Clint Checketts, Domo.com&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/implementing-config-server-and-extending-it"&gt;http://www.slideshare.net/SpringCentral/implementing-config-server-and-extending-it&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Spring Cloud Config Server is a great tool for getting your application configuration under source control. We&amp;rsquo;ll start with the quick overview of Spring&amp;rsquo;s Environment and properties and how config server enhances those, while keeping the same model.&lt;/p&gt;
-&lt;p&gt;Next we&amp;rsquo;ll discuss what concerns you need to take into account when rolling out config server like security, encryption, and location of your repositories (if using Git).&lt;/p&gt;
-&lt;p&gt;Finally we&amp;rsquo;ll discuss Config Server&amp;rsquo;s extensibility, particularly dealing with security (since config server serves up properties decrypted) and even going so far as adding &amp;lsquo;Filtering&amp;rsquo; to allow for capability akin to CloudFoundry &amp;lsquo;Services&amp;rsquo; for making shared configs that are available across many applications, even accounting for how you might test those extensions.&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/kmB8V59cab8" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>SpringOne Platform 2016 Replay: An Introduction to Distributed Tracing and Zipkin</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/01/23/springone-platform-2016-replay-an-introduction-to-distributed-tracing-and-zipkin" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2017-01-24:2800</id>
-    <updated>2017-01-23T22:37:00Z</updated>
-    <content type="html">&lt;p&gt;Recorded at SpringOne Platform 2016.&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/how-to-properly-blame-things-for-causing-latency"&gt;http://www.slideshare.net/SpringCentral/how-to-properly-blame-things-for-causing-latency&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Latency analysis is the act of blaming components for causing user perceptible delay. In today&amp;rsquo;s world of microservices, this can be tricky as requests can fan out across polyglot components and even data-centers. In many cases, the root source of latency isn&amp;rsquo;t a component, but rather a link between components.&lt;/p&gt;
-&lt;p&gt;This session will overview how to debug latency problems, using call graphs created by Zipkin. We&amp;rsquo;ll use trace zipkin itself, setting up from scratch using docker. While we&amp;rsquo;re at it, we&amp;rsquo;ll discuss how the model works, and how to safely trace production. Finally, we&amp;rsquo;ll overview the ecosystem, including tools to trace ruby, c#, java and spring boot apps.&lt;/p&gt;
-&lt;p&gt;When you leave, you&amp;rsquo;ll at least know something about distributed tracing, and hopefully be on your way to blaming things for causing latency!&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/jkSm-652UPo" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>SpringOne Platform 2016 Replay: Implementing Microservices tracing with Spring Cloud and Zipkin</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/01/23/springone-platform-2016-replay-implementing-microservices-tracing-with-spring-cloud-and-zipkin" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2017-01-24:2799</id>
-    <updated>2017-01-23T22:35:00Z</updated>
-    <content type="html">&lt;p&gt;Recorded at SpringOne Platform 2016.&lt;br/&gt;Speakers: Marcin Grzejszczak, Reshmi Krishna&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/implementing-microservices-tracing-with-spring-cloud-and-zipkin"&gt;http://www.slideshare.net/SpringCentral/implementing-microservices-tracing-with-spring-cloud-and-zipkin&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;2015 was the year of microservices. It’s already common knowledge that creating distributed systems is not easy. It’s 2016 and it’s time to show how that complexity can be contained.&lt;/p&gt;
-&lt;p&gt;Service Discovery and Registry (Zookeeper / Consul / Eureka), easy request sending with client side load balancing (Feign + Ribbon), request proxying with Zuul. Everything is easy with Spring Cloud. Just add a dependency, a couple of lines of configuration and you’re ready to go.&lt;/p&gt;
-&lt;p&gt;That’s fixing difficulties related to writing code - what about solving the complexity of debugging distributed systems? Log correlation and visualizing latency of parts of the system? Spring Cloud Sleuth to the rescue!&lt;/p&gt;
-&lt;p&gt;In this presentation, we’ll describe how to do distributed tracing with Spring Cloud Sleuth and Zipkin. Additionally, we&amp;rsquo;ll show a demo of incorporating these technologies into an existing stock trading application. By the end, you should feel empowered to add distributed tracing into your own applications!&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/vpFL4MZ0jlI" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>SpringOne Platform 2016 Replay: Spring Cloud on AWS</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/01/23/springone-platform-2016-replay-spring-cloud-on-aws" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2017-01-24:2796</id>
-    <updated>2017-01-23T22:34:00Z</updated>
-    <content type="html">&lt;p&gt;Recorded at SpringOne Platform 2016.&lt;br/&gt;Speaker: Agim Emruli&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/spring-cloud-on-aws"&gt;http://www.slideshare.net/SpringCentral/spring-cloud-on-aws&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Spring Cloud allows to implement cloud native application across different cloud platforms. Spring Cloud has also a dedicated support for running applications on the Amazon Web Service platform. This talk will introduce common patterns and best-practices to run the application the AWS cloud and how to use the platform provided services efficiently.&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Qq3CTHRLEwc" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
   </entry>
 </feed>

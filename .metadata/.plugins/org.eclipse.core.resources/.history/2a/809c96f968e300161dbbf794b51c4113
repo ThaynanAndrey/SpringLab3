@@ -1,9 +1,0 @@
-package br.com.listadetarefas.model;
-
-import javax.persistence.Entity;
-
-@Entity
-public enum Prioridade {
-
-	ALTA, MEDIA, BAIXA;
-}

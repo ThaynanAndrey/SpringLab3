@@ -32,13 +32,17 @@ public class SubTarefa {
 	@ManyToOne
     @JoinColumn(name = "TAREFA_ID")
     private Tarefa tarefa;
-	
+
 	public SubTarefa() {
 		// default
 	}
 	
-	public SubTarefa(String nome) {
+	public SubTarefa(Long id, String nome, Boolean realizada, Tarefa tarefa) {
+		super();
+		this.id = id;
 		this.nome = nome;
+		this.realizada = realizada;
+		this.tarefa = tarefa;
 	}
 
 	public Long getId() {
@@ -63,5 +67,13 @@ public class SubTarefa {
 
 	public void setRealizada(Boolean realizada) {
 		this.realizada = realizada;
+	}
+
+	public Tarefa getTarefa() {
+		return tarefa;
+	}
+
+	public void setTarefa(Tarefa tarefa) {
+		this.tarefa = tarefa;
 	}
 }

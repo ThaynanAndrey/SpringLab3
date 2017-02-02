@@ -5,7 +5,6 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -34,7 +33,7 @@ public class Tarefa {
 	@ManyToOne
     @JoinColumn(name = "LISTA_DE_TAREFA_ID")
     private ListaDeTarefas listaDeTarefas;
-	
+
 	@Column(name="DESCRICAO")
 	private String descricao;
 	
@@ -54,8 +53,17 @@ public class Tarefa {
 		// default
 	}
 	
-	public Tarefa(String nome, String descricao, String prioridade, String categoria) {
+	public Tarefa(Long id, String nome, ListaDeTarefas listaDeTarefas, String descricao, String prioridade,
+			String categoria, Boolean realizada, List<SubTarefa> subtarefas) {
+		super();
+		this.id = id;
 		this.nome = nome;
+		this.listaDeTarefas = listaDeTarefas;
+		this.descricao = descricao;
+		this.prioridade = prioridade;
+		this.categoria = categoria;
+		this.realizada = realizada;
+		this.subtarefas = subtarefas;
 	}
 	
 	public String getNome() {
@@ -102,15 +110,23 @@ public class Tarefa {
 		return subtarefas;
 	}
 
+	public ListaDeTarefas getListaDeTarefas() {
+		return listaDeTarefas;
+	}
+	
 	public void setSubtarefas(List<SubTarefa> subtarefas) {
 		this.subtarefas = subtarefas;
 	}
-	
+
 	public Boolean getRealizada() {
 		return realizada;
 	}
 
 	public void setRealizada(Boolean realizada) {
 		this.realizada = realizada;
+	}
+
+	public void setListaDeTarefas(ListaDeTarefas listaDeTarefas) {
+		this.listaDeTarefas = listaDeTarefas;
 	}
 }

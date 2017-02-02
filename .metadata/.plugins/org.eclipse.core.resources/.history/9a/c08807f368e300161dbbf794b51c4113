@@ -1,9 +1,0 @@
-package br.com.listadetarefas.model;
-
-import javax.persistence.Entity;
-
-@Entity
-public enum Categoria {
-	
-	LAZER, CASA, TRABALHO, UNIVERSIDADE; 
-}

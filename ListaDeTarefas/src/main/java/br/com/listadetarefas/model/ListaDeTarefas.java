@@ -5,7 +5,6 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -30,7 +29,7 @@ public class ListaDeTarefas {
 	private String nome;
 	
 	@OneToMany(targetEntity = Tarefa.class, mappedBy = "listaDeTarefas", cascade = CascadeType.ALL)
-    private List<Tarefa> listaDeTarefas;
+    private List<Tarefa> tarefas;
 
 	public ListaDeTarefas() {
 		//Default
@@ -38,7 +37,7 @@ public class ListaDeTarefas {
 	
 	public ListaDeTarefas(String nome, List<Tarefa> tarefas) {
 		this.nome = nome;
-		this.listaDeTarefas = tarefas;
+		this.tarefas = tarefas;
 	}
 	
 	public Long getId() {
@@ -58,11 +57,11 @@ public class ListaDeTarefas {
 	}
 
 	public List<Tarefa> getTarefas() {
-		return listaDeTarefas;
+		return tarefas;
 	}
 
 	public void setTarefas(List<Tarefa> tarefas) {
-		this.listaDeTarefas = tarefas;
+		this.tarefas = tarefas;
 	}
 	
 }
