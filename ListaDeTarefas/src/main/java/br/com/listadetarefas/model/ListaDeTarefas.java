@@ -31,15 +31,17 @@ public class ListaDeTarefas {
 	@OneToMany(targetEntity = Tarefa.class, mappedBy = "listaDeTarefas", cascade = CascadeType.ALL)
     private List<Tarefa> tarefas;
 
-	public ListaDeTarefas() {
-		//Default
-	}
-	
-	public ListaDeTarefas(String nome, List<Tarefa> tarefas) {
+	public ListaDeTarefas(Long id, String nome, List<Tarefa> tarefas) {
+		super();
+		this.id = id;
 		this.nome = nome;
 		this.tarefas = tarefas;
 	}
-	
+
+	public ListaDeTarefas() {
+		//Default
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -63,5 +65,4 @@ public class ListaDeTarefas {
 	public void setTarefas(List<Tarefa> tarefas) {
 		this.tarefas = tarefas;
 	}
-	
 }

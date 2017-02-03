@@ -49,10 +49,6 @@ public class Tarefa {
 	@OneToMany(mappedBy = "tarefa", cascade = CascadeType.ALL)
     private List<SubTarefa> subtarefas;
 	
-	public Tarefa() {
-		// default
-	}
-	
 	public Tarefa(Long id, String nome, ListaDeTarefas listaDeTarefas, String descricao, String prioridade,
 			String categoria, Boolean realizada, List<SubTarefa> subtarefas) {
 		super();
@@ -65,13 +61,9 @@ public class Tarefa {
 		this.realizada = realizada;
 		this.subtarefas = subtarefas;
 	}
-	
-	public String getNome() {
-		return nome;
-	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public Tarefa() {
+		// default
 	}
 
 	public Long getId() {
@@ -81,7 +73,19 @@ public class Tarefa {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public void setListaDeTarefas(ListaDeTarefas listaDeTarefas) {
+		this.listaDeTarefas = listaDeTarefas;
+	}
+
 	public String getDescricao() {
 		return descricao;
 	}
@@ -105,18 +109,6 @@ public class Tarefa {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
-	
-	public List<SubTarefa> getSubtarefas() {
-		return subtarefas;
-	}
-
-	public ListaDeTarefas getListaDeTarefas() {
-		return listaDeTarefas;
-	}
-	
-	public void setSubtarefas(List<SubTarefa> subtarefas) {
-		this.subtarefas = subtarefas;
-	}
 
 	public Boolean getRealizada() {
 		return realizada;
@@ -126,7 +118,11 @@ public class Tarefa {
 		this.realizada = realizada;
 	}
 
-	public void setListaDeTarefas(ListaDeTarefas listaDeTarefas) {
-		this.listaDeTarefas = listaDeTarefas;
+	public List<SubTarefa> getSubtarefas() {
+		return subtarefas;
+	}
+
+	public void setSubtarefas(List<SubTarefa> subtarefas) {
+		this.subtarefas = subtarefas;
 	}
 }
