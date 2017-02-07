@@ -51,7 +51,6 @@ public class Tarefa {
 	
 	public Tarefa(Long id, String nome, ListaDeTarefas listaDeTarefas, String descricao, String prioridade,
 			String categoria, Boolean realizada, List<SubTarefa> subtarefas) {
-		super();
 		this.id = id;
 		this.nome = nome;
 		this.listaDeTarefas = listaDeTarefas;
