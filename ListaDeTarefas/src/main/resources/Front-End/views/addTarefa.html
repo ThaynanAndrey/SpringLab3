@@ -1,0 +1,94 @@
+<div class="container">
+
+	<form class="well form-horizontal" action=" " method="post"  id="contact_form">
+		<fieldset>
+
+		<!-- Form Name -->
+		<legend>Adicione uma nova Tarefa a lista {{listaDeTarefasAtual.nome}}!</legend>
+
+			<div class="form-group">
+				<label class="col-md-4 control-label">Nome da Tarefa</label>  
+					<div class="col-md-4 inputGroupContainer">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-file"></i></span>
+						<input type="text" placeholder="Ex: Comer Cuscuz" class="form-control" ng-model="tarefa.nome" required>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-md-4 control-label">Categoria</label>  
+					<div class="col-md-4 inputGroupContainer">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-equalizer"></i></span>
+						<input type="text" placeholder="Ex: Lazer" class="form-control" ng-model="tarefa.categoria">
+					</div>
+				</div>
+			</div>
+		   
+		   	<div class="form-group">
+				<label class="col-md-4 control-label">Subtarefa</label>  
+					<div class="col-md-4 inputGroupContainer">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-equalizer"></i></span>
+						<md-chips class="form-control" ng-model="tarefa.subTarefa" placeholder="Adicione uma tarefa" md-max-chips="5">
+						</md-chips>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group"> 
+			<label class="col-md-4 control-label">Prioridade</label>
+				<div class="col-md-4 selectContainer">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+						<select ng-model="tarefa.prioridade" name="state" class="form-control selectpicker" >
+						<option>Por favor defina a prioridade da tarefa</option>
+						<option>Alta</option>
+						<option>Média</option>
+						<option>Baixa</option>
+					</select>
+					</div>
+				</div>
+			</div>
+
+			 <div class="form-group">
+			<label class="col-md-4 control-label">A Tarefa já foi realizada?</label>
+				<div class="col-md-4">
+				    <div class="radio">
+				        <label>
+				            <input ng-model="tarefa.realizada" type="radio" name="hosting" value="true" /> Sim
+				        </label>
+				    </div>
+				    <div class="radio">
+				        <label>
+				            <input ng-model="tarefa.realizada" type="radio" name="hosting" value="false" /> Não
+				        </label>
+				    </div>
+				</div>
+			</div>
+
+			  
+			<div class="form-group">
+			  <label class="col-md-4 control-label">Descrição da Tarefa</label>
+			    <div class="col-md-4 inputGroupContainer">
+			    <div class="input-group">
+			        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+			        	<textarea ng-model="tarefa.descricao" class="form-control" name="comment" placeholder="Descreva a sua tarefa..."></textarea>
+			  </div>
+			  </div>
+		</div>
+
+			<!-- Button -->
+			<div class="form-group">
+			  <label class="col-md-4 control-label"></label>
+			  <div class="col-md-4">
+			    <button type="button" ng-click="salvarTarefa(tarefa)" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span> Adicionar</button>
+			    <button type="button" ng-click="cancelarAdicaoTarefa()" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>
+			  </div>
+			</div>
+
+		</fieldset>
+	</form>
+	</div>
+</div>

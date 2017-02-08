@@ -1,0 +1,176 @@
+<div ng-controller="myController" layout="row">
+
+	<div ng-show="!addNovaTarefa">
+		<md-sidenav style="padding-top:40px; height: 100%; width: 300px; position: fixed;" layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+
+			<div class="list-group" ng-show="apresentarListaDeTarefas">
+			  <h4 type="text" class="list-group-item list-group-item-info">
+			    Lista de Tarefas
+			  </h4>
+			  <button type="button" ng-click="caregarTarefasDaListaEspecifica(listaDeTarefa)" class="list-group-item list-group-item-action" ng-repeat="listaDeTarefa in arrayListaDeTarefas">			  	
+			  	{{listaDeTarefa.nome}}
+			  </button>
+			  </br>
+
+			  <button type="button" ng-click="criarNovaListaDeTarefa()" class="btn btn-success">Nova Lista</button>
+
+			  <button type="button" ng-click="removerTodasAsListasDeTarefa()" class="btn btn-danger">Limpar Listas</button>
+
+			</div>
+
+			 <div class="modal-dialog" ng-show="!apresentarListaDeTarefas">
+				<div class="loginmodal-container">
+				  <form>
+					<p type="button" class="list-group-item list-group-item-action active">
+					    Nova Lista de Tarefas
+					</p>
+					</br>
+					<label class="col-md-4 control-label">Nome</label>
+					<input type="text" placeholder="Nome da Lista de Tarefas" class="form-control" ng-model="novaListaDeTarefas.nome">
+					</br>
+					<button type="button" ng-click="salvarListaDeTarefa(novaListaDeTarefas)" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span> Adicionar</button>
+				    <button type="button" ng-click="cancelarCiracaoNovaListaDeTarefa()" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>
+				  </form>
+				</div>
+			</div>
+
+		</md-sidenav>
+
+		<div style="padding-left: 300px; padding-top:50px;" layout="column" class="container" flex id="content" ng-show="arrayListaDeTarefas.length !== 0">
+			<md-content layout="column" class="md-padding">
+				<h1>{{listaDeTarefasAtual.nome}}</h1>	
+
+									<button type="button" style="width: 190px; margin-right: 15px;"" ng-click="ordenarPor('nome')" class="btn btn-link">Ordene Por nome</button>
+					<button type="button" style="width: 190px; margin-right: 15px;" ng-click="ordenarPor('prioridade')" class="btn btn-link">Ordene Por Prioridade</button>
+							
+				<input type="text" placeholder="Filtre sua busca por Nome ou Prioridade da Tarefa" class="form-control" ng-model="tipoDeCategoria">
+				
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Tarefa</th>
+							<th>Categoria</th>
+							<th>Prioridade</th>
+							<th></th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr ng-click="apresentarSideNav(tarefa)" ng-repeat="tarefa in tarefas | filter: tipoDeCategoria | orderBy:tipoDeOrdenacao:false:ordenar">
+
+							<td>{{tarefa.nome}}</td>
+							<td>{{tarefa.categoria}}</td>
+							<td>{{tarefa.prioridade}}</td>
+						</tr>
+					</tbody>
+
+				</table>
+
+				<div class="progress">
+					<div ng-model="progresso" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
+					aria-valuemin="0" aria-valuemax="100" ng-style="{width : ( progresso + '%' ) }">
+					{{progresso}}% Completo	</div>
+				</div>
+				<md-content layout="row" align="middle">
+
+					<button type="button" style="width: 190px; margin-right:15px;" class="btn btn-primary" ng-click="novaTarefa()">Nova Tarefa</button>
+					
+					<button type="button" style="width: 190px; margin-right:15px;" ng-click="removerTodasTarefas()" class="btn btn-warning">Remover Todas Tarefas</button>
+
+					<button type="button" style="width: 190px; margin-right: 15px;" class="btn btn-danger" ng-click="removerListaDeTarefas(listaDeTarefasAtual)">Excluir Lista de Tarefas</button>
+
+
+				</md-content>
+			</md-content>
+		</div>
+
+		<md-sidenav style="padding-top:50px; height: 100%; width: 300px; position: fixed;" class="md-sidenav-right md-whiteframe-4dp" md-component-id="taskInfo">
+			
+			<div class="list-group">
+				<li class="list-group-item list-group-item-action"><span class="glyphicon glyphicon-file"></span> <b>Nome: </b>{{tarefaSelecionada.nome}}</li>
+			    <li class="list-group-item list-group-item-action"><span class="glyphicon glyphicon-align-left"></span> <b>Prioridade:</b> {{tarefaSelecionada.prioridade}}</li>
+			    <li class="list-group-item list-group-item-action"><span class="glyphicon glyphicon-equalizer"></span> <b>Categoria:</b> {{tarefaSelecionada.categoria}}</li>
+			    <li class="list-group-item list-group-item-action"><span class="glyphicon glyphicon-pencil"></span> <b>Descrição: </b>{{tarefaSelecionada.descricao}}</li>
+
+			    <div class="list-group">
+			    	<li class="list-group-item list-group-item-action"><span class="glyphicon glyphicon-list-alt"></span><b> Subtarefas:</b></li>
+				    <p style="margin-left: 30px;" ng-repeat="subtarefa in subtarefasAtuais" class="list-group-item">{{subtarefa.nome}}</p>
+				</div>
+
+			    <li ng-if="!tarefaSelecionada.realizada" class="list-group-item list-group-item-danger">A Tarefa ainda não foi realizada!</li>
+			    <li ng-if="tarefaSelecionada.realizada" class="list-group-item list-group-item-success">A Tarefa foi realizada!</li>
+
+			    </br>
+			    <button type="button" class="btn btn-danger" ng-click="removerTarefa(tarefaSelecionada)">Remover Tarefa</button>
+
+			    <button type="button" class="btn btn-info" ng-click="editarTarefa(tarefaSelecionada)">Editar Tarefa</button>
+
+			</div>
+
+		</md-sidenav>
+
+	</div>
+
+	<div class="container" ng-if="addNovaTarefa" style="padding-top:70px;">
+
+		<md-content class="md-no-momentum">
+			    
+			<form name="tarefaForm">
+
+				<legend ng-if="!isEditTarefa">Adicione uma nova Tarefa a lista {{listaDeTarefasAtual.nome}}!</legend>
+				<legend ng-if="isEditTarefa">Edite a Tarefa {{tarefa.nome}} da lista {{listaDeTarefasAtual.nome}}!</legend>
+
+			    <md-input-container class="md-icon-float md-block">
+			      <label>Nome</label>
+			      <input placeholder="Nome da Tarefa" ng-required="true" ng-model="tarefa.nome" type="text">
+			    </md-input-container>
+
+			    <md-input-container md-no-float="" class="md-block">
+				    <label>Categoria</label>
+				    <input ng-model="tarefa.categoria" placeholder="Categoria" type="text">
+			    </md-input-container>
+
+				<md-input-container md-no-float="" class="md-block">
+			    	<label>Subtarefas</label>
+			    	<md-chips ng-model="tarefa.subtarefas" placeholder="Adicione subtarefas" ng-if="isEditTarefa">
+				    	<md-chip-template>
+					        {{$chip.nome}}
+					    </md-chip-template>
+					</md-chips>
+					<md-chips ng-model="tarefa.subtarefas" placeholder="Adicione subtarefas" ng-if="!isEditTarefa">
+					</md-chips>
+				</md-input-container>
+
+			    <md-input-container class="md-block" flex-gt-sm="">
+		            <label>Prioridade</label>
+		            <md-select ng-model="tarefa.prioridade">
+		              <md-option ng-repeat="prioridade in prioridades" value="{{prioridade}}">
+		                {{prioridade}}
+		              </md-option>
+		            </md-select>
+		      	</md-input-container>
+
+		      	<md-input-container class="md-block">
+			        <md-checkbox name="tos" ng-model="tarefa.realizada" value="true">
+			          A tarefa já foi realizada?
+			        </md-checkbox>
+			    </md-input-container>
+
+			    <md-input-container class="md-icon-float md-block">
+			        <label>Descrição</label>
+			        <input md-maxlength="50" md-no-asterisk="" name="descricao" ng-model="tarefa.descricao">
+			        <div ng-messages="tarefaForm.descricao.$error">
+			          <div ng-message="md-maxlength">A descrição deve ter no máximo 50 caracteres.</div>
+			        </div>
+			    </md-input-container>
+
+			    <md-button ng-if="!isEditTarefa" type="button" ng-click="salvarTarefa(tarefa)" class="md-raised md-primary" >Adicionar</md-button>
+			    <md-button ng-if="isEditTarefa" type="button" ng-click="salvarTarefa(tarefa)" class="md-raised md-primary">Editar</md-button>
+			    <md-button type="button" ng-click="cancelarAdicaoTarefa()" class="md-raised md-warn">Cancelar</md-button>
+
+		    </form>
+
+		</md-content>
+	</div>
+
+</div>
