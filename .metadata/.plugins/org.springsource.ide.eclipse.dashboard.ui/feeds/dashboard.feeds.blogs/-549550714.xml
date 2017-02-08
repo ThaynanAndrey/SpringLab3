@@ -5,7 +5,39 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-02-06T16:06:00Z</updated>
+  <updated>2017-02-07T10:38:00Z</updated>
+  <entry>
+    <title>This Week in Spring - February 7th, 2017</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/02/07/this-week-in-spring-february-7th-2017" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2017-02-07:2834</id>
+    <updated>2017-02-07T10:38:00Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! We&amp;rsquo;ve got a lot to cover this week so let&amp;rsquo;s get to it.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Fred Melo is one of Pivotal&amp;rsquo;s brightest and when he talks about data, people listen. Here&amp;rsquo;s your chance to &lt;a href="https://spring.io/blog/2017/02/06/springone-platform-2016-replay-architecting-for-cloud-native-data-data-microservices-done-right-using-spring-cloud"&gt;watch his SpringOne Platform talk on data microservices&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I liked this SpringOne Platform talk, from Confluent&amp;rsquo;s Joe Kutner, &lt;a href="https://spring.io/blog/2017/02/06/springone-platform-2016-replay-i-can-t-believe-it-s-not-a-queue-using-kafka-with-spring"&gt;&lt;em&gt;I Can&amp;rsquo;t Believe it&amp;rsquo;s not a Queue: using Apache Kafka with Spring&lt;/em&gt;&lt;/a&gt;. It&amp;rsquo;s a focused look on Apache Kafka, one of the most capable and cloud-native message queues these days - Apache Kafka - with Spring.&lt;/li&gt;
+  &lt;li&gt;Check out Spring Integration and messaging &lt;a href="https://spring.io/blog/2017/02/06/springone-platform-2016-replay-spring-for-apache-kafka"&gt;guru Gary Russell&amp;rsquo;s SpringOne Platform look at Spring for Apache Kafka&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;check out Spring and Spring for Apache Hadoop contributor &lt;a href="https://spring.io/blog/2017/02/06/springone-platform-2016-replay-spring-and-big-data"&gt;Thomas Risberg&amp;rsquo;s look at building big-data pipelines with Spring&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;our friend Toshiaki Maki has &lt;a href="https://github.com/making/beansviz-spring-boot-actuator"&gt;built a &lt;em&gt;really&lt;/em&gt; cool Graphviz visualization of the beans in an application&lt;/a&gt; that&amp;rsquo;s accessible under the &lt;code&gt;/beansviz&lt;/code&gt; endpoint.&lt;/li&gt;
+  &lt;li&gt;Spring Cloud contributor Vinicius Carvalho&amp;rsquo;s SpringOne Platform talk on &lt;a href="https://spring.io/blog/2017/02/06/springone-platform-2016-replay-building-resilient-and-evolutionary-data-microservices"&gt;evolutionary and resilient microservices is one to watch&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Integration Java DSL lead Artem Bilan just &lt;a href="https://spring.io/blog/2017/02/06/spring-for-apache-kafka-1-1-3-available-now"&gt;announced Spring for Apache Kafka 1.1.3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Cloud ninja Marcin Grzejszczak &lt;a href="https://spring.io/blog/2017/02/06/spring-cloud-camden-sr5-is-available"&gt;just announced Spring Cloud Camden SR5&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;the team behind Spring Tool Suite is cooking up some amazing stuff for Spring Tool Suite 4, and a huge part of that is an extraction of the plugins in STS as language servers that can be used with a variety of other IDEs, including Atom and Microsoft VS Code. As part of the that, &lt;a href="https://spring.io/blog/2017/02/03/cloud-foundry-manifest-editor-beta-released-for-visual-studio-code"&gt;the team has just released the Cloud Foundry &lt;code&gt;manifest.yml&lt;/code&gt; editor&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring IO Platform lead &lt;a href="https://spring.io/blog/2017/02/02/spring-io-platform-brussels-rc1"&gt;Andy Wilkinson just announced Spring IO Platform Brussels RC1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;not one to rest on his laurels, Andy &lt;em&gt;also&lt;/em&gt; just announced &lt;a href="https://spring.io/blog/2017/02/01/spring-io-platform-athens-sr3"&gt;Spring IO Platform Athens SR3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Are you going to be at the fabulous DevNexus event in Atlanta, GA, later this month? &lt;a href="https://spring.io/blog/2017/02/01/spring-team-at-devnexus-2017"&gt;The Spring team will be there too!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;seems I missed a good one in January! Check out Muhammad Noor&amp;rsquo;s post on building &lt;a href="https://dzone.com/articles/functional-amp-reactive-spring-along-with-netflix"&gt;reactive based microservices with Spring Cloud and&lt;br/&gt; Reactor&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Rashidi Zin put together a nice example of &lt;a href="https://github.com/rashidi/spring-boot-data-audit"&gt;using Spring Data to support entity auditing&lt;/a&gt;. Very cool Rashidi!&lt;/li&gt;
+  &lt;li&gt;Bruno Krebs put together a very cool post on building &lt;a href="https://hackernoon.com/spring-boot-rest-tdd-from-scratch-15f13ed799e0#.hfy5lyjwl"&gt;a REST API wiht test-driven development (and Spring Boot, naturally)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Mario-Leander Reimer&amp;rsquo;s cloud-native workshop at the OOP17 conference looks pretty darned interesting! I wish I&amp;rsquo;d been there. For those of us that weren&amp;rsquo;t, though, &lt;a href="https://github.com/qaware/hitchhikers-guide-cloudnative"&gt;there is at least his Git repository&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Speaking of DevNexus, this oldie-but-a-goodie, &lt;a href="https://www.youtube.com/watch?v=X7O11GrHgjE"&gt;&lt;em&gt;Keeping it Clean: Lessons from Open Source and How to Polish&lt;/em&gt;&lt;/a&gt;, from Spring Boot co-lead Phil Webb is definitely a good watch if you haven&amp;rsquo;t seen it&lt;/li&gt;
+  &lt;li&gt;While not, strictly speaking, related to Spring, continuous delivery is the grand unifiying theory behind microservices, agile, TDD, and so many other practices we take for granted today and few people &lt;a href="https://www.youtube.com/watch?v=nauFRW6gYjc"&gt;introduce the rationale behind it better than Chris Farley&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;This post has little to do with Spring itself but it is a &lt;em&gt;very&lt;/em&gt; interesting look at the &lt;a href="https://srvaroa.github.io/jvm/java/openjdk/biased-locking/2017/01/30/hashCode.html"&gt;implications on performance in the JVM that don&amp;rsquo;t override &lt;code&gt;#hashCode&lt;/code&gt; in certain contexts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>SpringOne Platform 2016 Replay: I can't believe it's not a queue: Using Kafka with Spring</title>
     <link rel="alternate" href="https://spring.io/blog/2017/02/06/springone-platform-2016-replay-i-can-t-believe-it-s-not-a-queue-using-kafka-with-spring" />
@@ -1150,18 +1182,5 @@ With Ingalls, we have extracted that support into a Spring Data module, so that 
     <content type="html">&lt;p&gt;Recorded at SpringOne Platform 2016.&lt;br/&gt;Speakers: Michael Minella,Glenn Renfro&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/task-madness-modern-on-demand-processing"&gt;http://www.slideshare.net/SpringCentral/task-madness-modern-on-demand-processing&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The flexibility promised by cloud computing is something that hasn&amp;rsquo;t been fully available in many use cases yet. Most application models are still based on long running containers, robbing users of that very flexibility. Spring Cloud Task, a new project in the Spring portfolio provides both functional and non-functional capabilities for building short lived, cloud-native, microservices. This talk will introduce the project as well as look at example applications. Since we&amp;rsquo;re in Vegas, we&amp;rsquo;re going to put that on demand processing to good use by demonstrating how we used it to generate a March Madness NCAA Men&amp;rsquo;s Basketball Tournament bracket. We&amp;rsquo;ll review how it worked, why Spring Cloud Task was the best fit for this type of application, and how we did this past March!&lt;/p&gt;
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/golp4gH7MsI" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>SpringOne Platform 2016 Replay: Secure &amp; Dynamic App Config at GapTech with Spring Cloud, Vault and Consul</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/01/30/springone-platform-2016-replay-secure-dynamic-app-config-at-gaptech-with-spring-cloud-vault-and-consul" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2017-01-30:2818</id>
-    <updated>2017-01-30T12:29:00Z</updated>
-    <content type="html">&lt;p&gt;Recorded at SpringOne Platform 2016.&lt;br/&gt;Speaker: Nivesh Gopathi, Gap Tech&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/secure-dynamic-app-config-at-gaptech"&gt;http://www.slideshare.net/SpringCentral/secure-dynamic-app-config-at-gaptech&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;As organizations move to audit trails over managed processes, continuous delivery with aggressive MTTR, security first doctrines and ephemeral instances, a key enabler is a platform ability for dynamic application configuration and securely bootstrapping application secrets. In this session, we will go over what the use cases for dynamic configuration and application secrets management are with some high level requirements, how we are collaboratively solving for these at enterprise scale using Spring Cloud Config, Vault and Consul and what’s coming next.&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/edKASC0zXzw" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
   </entry>
 </feed>

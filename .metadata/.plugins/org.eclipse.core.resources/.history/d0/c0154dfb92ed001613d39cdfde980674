@@ -1,0 +1,9 @@
+server.port=${port:8080}
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/teste
+spring.datasource.password=t98765y
+spring.datasource.username=postgres
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
